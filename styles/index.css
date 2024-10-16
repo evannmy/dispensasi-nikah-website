@@ -1,0 +1,134 @@
+@font-face {
+  font-family: "work-sans";
+  src: url("../fonts/work-sans/WorkSans-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "work-sans-bold";
+  src: url("../fonts/work-sans/WorkSans-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* nav syle */
+nav {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  font-family: work-sans-bold, sans-serif;
+  font-size: .8em;
+  z-index: 1;
+  color: white;
+}
+
+nav .logo {
+  width: 40px;
+}
+
+/* main style */
+main {
+  font-family: work-sans, sans-serif;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  padding: 10px;
+  text-align: center;
+  background-color: #111;
+  overflow: hidden;
+  color: white;
+}
+
+main .background {
+  position: absolute;
+  height: 100%;
+  opacity: .3;
+  margin-left: 0;
+}
+
+main *:not(img) {
+  z-index: 1;
+}
+
+main h1 {
+  font-size: 1.4em;
+  line-height: 1.35em;
+}
+
+main span {
+  color: #4c9a2a;
+}
+
+main p {
+  line-height: 1.3em;
+}
+
+.button {
+  padding: 5px 10px;
+  background-color: #4c9a2a;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+}
+
+@media print, screen and (min-width: 768px) {
+  main {
+    gap: 30px;
+  }
+
+  main .background {
+    margin-left: 0;
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media print, screen and (min-width: 992px) {
+  main {
+    gap: 35px;
+  }
+
+  main .background {
+    margin-top: -20%;
+  }
+
+  main h1 {
+    font-size: 1.6em;
+  }
+
+  main p {
+    font-size: 1.1em;
+  }
+}
+
+@media print, screen and (min-width: 1200px) {
+  main {
+    gap: 40px;
+  }
+
+  main .background {
+    margin-top: -25%;
+  }
+
+  main h1 {
+    font-size: 1.8em;
+  }
+
+  main p {
+    font-size: 1.15em;
+  }
+}
