@@ -18,7 +18,6 @@
   </nav>
 
   <main>
-    <img src="images/candi-pari.png" alt="background" class="background">
     <h1>
       Selamat Datang di Website Dispensasi Nikah
       <br>

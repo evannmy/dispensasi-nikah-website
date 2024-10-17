@@ -18,6 +18,12 @@
   box-sizing: border-box;
 }
 
+body {
+  background-image: url("../images/candipari-2.png");
+  background-size: auto 100%;
+  background-position-x: center;
+}
+
 /* nav syle */
 nav {
   position: absolute;
@@ -27,7 +33,6 @@ nav {
   padding: 10px;
   font-family: work-sans-bold, sans-serif;
   font-size: .8em;
-  z-index: 1;
   color: white;
 }
 
@@ -38,7 +43,6 @@ nav .logo {
 /* main style */
 main {
   font-family: work-sans, sans-serif;
-  position: relative;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -47,20 +51,7 @@ main {
   gap: 25px;
   padding: 10px;
   text-align: center;
-  background-color: #111;
-  overflow: hidden;
   color: white;
-}
-
-main .background {
-  position: absolute;
-  height: 100%;
-  opacity: .3;
-  margin-left: 0;
-}
-
-main *:not(img) {
-  z-index: 1;
 }
 
 main h1 {
@@ -89,21 +80,11 @@ main p {
   main {
     gap: 30px;
   }
-
-  main .background {
-    margin-left: 0;
-    width: 100%;
-    height: auto;
-  }
 }
 
 @media print, screen and (min-width: 992px) {
   main {
     gap: 35px;
-  }
-
-  main .background {
-    margin-top: -20%;
   }
 
   main h1 {
@@ -116,12 +97,12 @@ main p {
 }
 
 @media print, screen and (min-width: 1200px) {
-  main {
-    gap: 40px;
+  body {
+    background-size: cover;
   }
 
-  main .background {
-    margin-top: -25%;
+  main {
+    gap: 40px;
   }
 
   main h1 {
