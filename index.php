@@ -29,9 +29,7 @@
       Klik tombol dibawah ini untuk mengisi data
     </p>
   
-    <a class="button" href="data-suami.php">
-      <p>Lanjut</p>
-    </a>
+    <a class="button" href="data-suami.php">Lanjut</a>
   </main>
 
 </body>

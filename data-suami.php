@@ -21,7 +21,7 @@
       <section>
         <div class="form-section">
           <p class="header">Permohonan Surat Dispensasi Nikah</p>
-          <p>Masukkan Data Calon Suami</p>
+          <p>Masukkan Data Calon <span style="color: #4E88C4">Suami</span></p>
     
           <form action="data-istri.php" method="post">
             <!-- input name -->
