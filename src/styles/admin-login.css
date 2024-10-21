@@ -1,0 +1,111 @@
+@font-face {
+  font-family: "work-sans";
+  src: url("../fonts/work-sans/WorkSans-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "work-sans-bold";
+  src: url("../fonts/work-sans/WorkSans-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+  font-family: work-sans, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../images/white-background.jpg);
+  background-size: cover;
+}
+
+/* nav style */
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: work-sans-bold, sans-serif;
+  font-size: .8em;
+  margin: 10px;
+}
+
+nav .logo {
+  width: 40px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.7em;
+  margin-bottom: 15px;
+  color: #197855;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input:not([type="submit"]) {
+  display: block;
+  margin-bottom: 10px;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input {
+  border-radius: 5px;
+  border: 1px solid #161b33;
+  height: 28px;
+  padding: 3px;
+}
+
+input[type="submit"] {
+  width: auto;
+  margin-top: 10px;
+  background-color: #197855;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+@media print, screen and (min-width: 992px) {
+  h1 {
+    margin-bottom: 25px;
+  }
+
+  main {
+    width: 28em;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 10px;
+    padding: 4em;
+    background-color: white;
+  }
+
+  input {
+    height: 30px;
+  }
+
+  input:not([type="submit"]) {
+    margin-bottom: 15px;
+  }
+
+  label {
+    margin-bottom: 10px;
+  }
+}
