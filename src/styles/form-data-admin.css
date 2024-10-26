@@ -18,18 +18,17 @@
   box-sizing: border-box;
 }
 
-html, body {
-  height: 100%;
-}
-
 body {
-  padding: 10px;
   background-color: #197855;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
+  position: fixed;
+  background-color: #197855;
+  width: 100%;
+  padding: 10px;
 }
 
 .dark-bg {
@@ -40,11 +39,9 @@ nav {
   left: 0;
   right: 0;
   width: 100%;
-  min-height: 100vh;
   background-color: black;
   opacity: .6;
   z-index: 1;
-  height: 100%;
 }
 
 .dark-bg.active {
@@ -82,6 +79,7 @@ nav img:nth-child(2) {
   position: fixed;
   justify-content: center;
   align-items: center;
+  top: 2.63em;
   right: 0;
   width: fit-content;
   height: auto;
@@ -169,53 +167,6 @@ main h1 {
   color: white;
 }
 
-.data-page {
-  width: 100%;
-  font-family: sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  background-color: white;
-  border-radius: 15px;
-  height: calc(100vh - 164.3133px);
-  padding: 10px;
-  overflow: scroll;
-}
-
-.data-page table {
-  width: 100%;
-  text-align: center;
-}
-
-.data-page table th {
-  position: sticky;
-  top: 5px;
-  padding: 5px 0;
-  background-color: #197855;
-  border-radius: 10px;
-  color: white;
-}
-
-.data-page table td, .data-page table th {
-  width: 5em;
-}
-
-.data-page table td a {
-  text-decoration: none;
-}
-
-.data-page table td img {
-  width: 1.3em;
-}
-
-.data-page table tr:nth-child(2) td {
-  padding-top: 1em;
-}
-
-.data-page table tr:not(:nth-child(1), :nth-child(2)) td {
-  padding-top: .5em;
-}
-
 .desktop-heading {
   display: none;
   justify-content: space-between;
@@ -241,17 +192,171 @@ main h1 {
   width: 40px;
 }
 
-@media print, screen and (min-width: 768px) {
-  .data-page {
-    width: 90%;
-  }
+section {
+  width: 90%;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  font-family: sans-serif;
+  margin-bottom: 20px;
+}
 
+.header {
+  color: white;
+  font-family: work-sans-bold, sans-serif;
+  margin-top: 4em;
+  margin-bottom: 1.5em;
+  text-align: center;
+  line-height: 1.5em;
+  font-size: 1em;
+}
+
+section hr {
+  margin: 2em 0;
+  width: 100%;
+  color: #197855;
+}
+
+section p {
+  margin: 15px 0;
+  font-family: work-sans-bold, sans-serif;
+}
+
+section p:nth-of-type(2) {
+  margin-top: 0;
+}
+
+section p:nth-of-type(2) {
+  font-weight: bold;
+}
+
+input, label {
+  display: block;
+}
+
+input, select {
+  margin-bottom: 10px;
+}
+
+input, select {
+  border-radius: 5px;
+  border: 1px solid #161b33;
+  height: 28px;
+  padding: 3px;
+}
+
+input:not([type="submit"]) {
+  width: 100%;
+}
+
+input[type="submit"] {
+  width: auto;
+  margin-top: 25px;
+  background-color: #197855;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+select {
+  background-color: white;
+}
+
+textarea {
+  border-radius: 5px;
+  border: 1px solid #161b33;
+  font-family: sans-serif;
+  font-size: .8em;
+  padding: 3px;
+  resize: vertical;
+}
+
+@media print, screen and (min-width: 768px) {
   .off-screen-menu {
     width: 30%;
+  }
+
+  section {
+    display: flex;
+  }
+
+  .header {
+    font-size: 1.1em;
+  }
+  
+  .icon-section {
+    width: 23%;
+    margin-top: 10px;
+    background-image: url("../images/icon-2.png");
+    background-size: 100%;
+    background-position: center;
+  }
+
+  .form-section {
+    flex-grow: 1;
+    padding-right: 8%;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  input:not([type="submit"]) {
+    width: 100%;
   }
 }
 
 @media print, screen and (min-width: 992px) {
+  .hamburger-menu-close {
+    display: none;
+  }
+
+  body {
+    padding: 10px;
+  }
+
+  .header {
+    display: none;
+  }
+
+  section {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+
+  .icon-section {
+    display: none;
+  }
+
+  .form-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  .input-container {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  section hr {
+    display: none;
+  }
+
+  section p {
+    margin-top: 0;
+  }
+
   .desktop-content {
     display: flex;
     height: calc(100vh - 68.0167px);
@@ -270,17 +375,6 @@ main h1 {
     display: none;
   }
 
-  .hamburger-menu-close {
-    display: none;
-  }
-
-  .data-page {
-    border-radius: 10px;
-    width: 100%;
-    height: 100%;
-    overflow: scroll;
-  }
-
   .desktop-heading {
     display: flex;
   }
@@ -291,6 +385,16 @@ main h1 {
 
   main h1 {
     display: none;
+  }
+
+  .input-1, .input-2 {
+    width: 40%;
+  }
+
+  input[type="submit"] {
+    margin: auto;
+    margin-top: 3%;
+    width: 8%;
   }
 
   .off-screen-menu {
@@ -313,9 +417,5 @@ main h1 {
 
   .off-screen-menu ul li a img {
     fill: black;
-  }
-
-  .data-page table th {
-    top: 0;
   }
 }
