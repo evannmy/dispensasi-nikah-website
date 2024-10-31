@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dispensasi Nikah - Data Suami</title>
+    <link rel="icon" type="image/x-icon" href="src/images/icon/sidoarjo-regency-logo.ico">
     <link rel="stylesheet" href="../src/styles/user/form-data.css">
   </head>
   <body>

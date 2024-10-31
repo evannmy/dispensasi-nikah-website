@@ -15,6 +15,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+    <link rel="icon" type="image/x-icon" href="src/images/icon/sidoarjo-regency-logo.ico">
     <link rel="stylesheet" href="src/styles/admin/update.css">
   </head>
   <body>

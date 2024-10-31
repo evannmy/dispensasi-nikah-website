@@ -1,5 +1,5 @@
 <?php
-  require_once '../utility/function.php';
+  require_once 'utility/function.php';
 
   $idSuami = $_GET['id'];
 
