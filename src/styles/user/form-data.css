@@ -1,6 +1,6 @@
 @font-face {
   font-family: "work-sans-bold";
-  src: url("../fonts/work-sans/WorkSans-Bold.ttf");
+  src: url("../../fonts/work-sans/WorkSans-Bold.ttf");
   font-weight: bold;
   font-style: normal;
 }
@@ -118,7 +118,7 @@ textarea {
   .icon-section {
     width: 23%;
     margin-top: 10px;
-    background-image: url("../images/icon-2.png");
+    background-image: url("../../images/icon/icon-2.png");
     background-size: 100%;
     background-position: center;
   }

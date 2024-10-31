@@ -1,36 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Permohonan Dispensasi Nikah</title>
-  <link rel="stylesheet" href="src/styles/index.css">
-</head>
-<body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="src/styles/admin/login.css">
+  </head>
+  <body>
+    <nav>
+      <img class="logo" src="src/images/icon/sidoarjo-regency-logo.svg" alt="Logo Kabupaten Sidoarjo">
+      <p>
+        KECAMATAN PORONG
+        <br>
+        KABUPATEN SIDOARJO
+      </p>
+    </nav>
 
-  <nav>
-    <img class="logo" src="src/images/sidoarjo-regency-logo.svg" alt="Logo Kabupaten Sidoarjo">
-    <p>
-      KECAMATAN PORONG
-      <br>
-      KABUPATEN SIDOARJO
-    </p>
-  </nav>
+    <main>
+      <h1>Login</h1>
 
-  <main>
-    <h1>
-      Selamat Datang di Website Dispensasi Nikah
-      <br>
-      <span>Kecamatan Porong</span>
-    </h1>
-    <p>
-      Untuk membuat surat dispensasi nikah silahkan lengkapi data yang diperlukan.
-      <br>
-      Klik tombol dibawah ini untuk mengisi data
-    </p>
-  
-    <a class="button" href="data-suami.php">Lanjut</a>
-  </main>
+      <div class="form-bg">
+        
+      </div>
+      <form>
+        <!-- username input -->
+         <label for="username">Username: </label>
+         <input type="text" name="username" id="username" >
 
-</body>
+         <!-- password input -->
+         <label for="password">Password: </label>
+         <input type="password" name="password" id="password">
+
+         <input type="submit" value="login">
+      </form>
+    </main>
+  </body>
 </html>

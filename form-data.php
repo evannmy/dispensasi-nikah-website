@@ -1,16 +1,23 @@
+<?php 
+  require_once 'utility/function.php';
+
+  if (isset($_POST['submit'])) {
+    insertData($_POST);
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="../src/styles/form-data-admin.css">
+    <link rel="stylesheet" href="src/styles/admin/form-data.css">
   </head>
   <body>
 
     <div class="desktop-heading">
       <div class="logo-container">
-        <img class="logo" src="../src/images/sidoarjo-regency-logo.svg" alt="Logo Kabupaten Sidoarjo">
+        <img class="logo" src="src/images/icon/sidoarjo-regency-logo.svg" alt="Logo Kabupaten Sidoarjo">
         <p>
           KECAMATAN PORONG
           <br>
@@ -18,19 +25,20 @@
         </p>
       </div class="logo-container">
       <h1>Data Pengajuan Dispensasi Nikah</h1>
+      <img src="src/images/icon/user.svg" alt="user icon">
     </div>
 
     <div class="desktop-content">
       <nav>
-        <img src="../src/images/hamburger-menu.svg" alt="hamburger menu icon" class="hamburger-menu">
-        <img src="../src/images/user.svg" alt="user icon">
+        <img src="src/images/icon/hamburger-menu.svg" alt="hamburger menu icon" class="hamburger-menu">
+        <img src="src/images/icon/user.svg" alt="user icon">
       </nav>
   
       <div class="user-dropdown">
         <ul>
           <li>
             <a href="index.php">
-              <img src="../src/images/logout-icon.svg" alt="logout-icon">
+              <img src="src/images/icon/logout-icon.svg" alt="logout-icon">
               Logout
             </a>
           </li>
@@ -39,17 +47,17 @@
       <div class="dark-bg"></div>
   
       <div class="off-screen-menu">
-        <img src="../src/images/hamburger-menu-close.svg" alt="hamburger menu close icon" class="hamburger-menu-close">
+        <img src="src/images/icon/hamburger-menu-close.svg" alt="hamburger menu close icon" class="hamburger-menu-close">
         <ul>
           <li>
             <a href="dashboard.php">
-              <img src="../src/images/book.svg" alt="book-icon">
+              <img src="src/images/icon/book.svg" alt="book-icon">
               Daftar Data
             </a>
           </li>
           <li>
             <a href="">
-              <img src="../src/images/add-data.svg" alt="add-data-icon">
+              <img src="src/images/icon/add-data.svg" alt="add-data-icon">
               Input Data
             </a>
           </li>
@@ -97,7 +105,7 @@
         
                 <!-- input address -->
                 <label for="hAddress">Alamat: </label>
-                <textarea name="hAddress" id="hAddress" rows="3" cols="40" required></textarea>
+                <textarea name="hAddress" id="hAddress" rows="3" cols="40" maxlength="100" required></textarea>
               </div>
   
               <hr>
@@ -136,7 +144,7 @@
         
                 <!-- input address -->
                 <label for="wAddress">Alamat: </label>
-                <textarea name="wAddress" id="wAddress" rows="3" cols="40" required></textarea>
+                <textarea name="wAddress" id="wAddress" rows="3" cols="40" maxlength="100" required></textarea>
               </div>
             </div>
 
@@ -148,6 +156,6 @@
       </section>
     </main>
 
-  <script src="../src/scripts/admin-page.js"></script>
+  <script src="src/scripts/admin.js"></script>
   </body>
 </html>

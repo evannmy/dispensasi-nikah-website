@@ -1,13 +1,13 @@
 @font-face {
   font-family: "work-sans";
-  src: url("../fonts/work-sans/WorkSans-Regular.ttf");
+  src: url("../../fonts/work-sans/WorkSans-Regular.ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "work-sans-bold";
-  src: url("../fonts/work-sans/WorkSans-Bold.ttf");
+  src: url("../../fonts/work-sans/WorkSans-Bold.ttf");
   font-weight: bold;
   font-style: normal;
 }
@@ -19,7 +19,7 @@
 }
 
 body {
-  background-image: url("../images/candipari-2.png");
+  background-image: url("../../images/bg/candipari.png");
   background-size: auto 100%;
   background-position-x: center;
 }

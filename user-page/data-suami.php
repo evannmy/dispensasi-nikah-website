@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dispensasi Nikah - Data Suami</title>
-    <link rel="stylesheet" href="src/styles/form-data.css">
+    <link rel="stylesheet" href="../src/styles/user/form-data.css">
   </head>
   <body>
 
     <main>
       <nav>
-        <img class="logo" src="src/images/sidoarjo-regency-logo.svg" alt="Logo Kabupaten Sidoarjo">
+        <img class="logo" src="../src/images/icon/sidoarjo-regency-logo.svg" alt="Logo Kabupaten Sidoarjo">
         <p>
           KECAMATAN PORONG
           <br>
