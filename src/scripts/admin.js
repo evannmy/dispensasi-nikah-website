@@ -7,6 +7,7 @@ const userIcon2 = document.querySelectorAll('.desktop-heading img')[1];
 const userDropDown = document.querySelector('.user-dropdown');
 const bookIcon = document.querySelectorAll('.off-screen-menu ul li a img')[0];
 const addDataIcon = document.querySelectorAll('.off-screen-menu ul li a img')[1];
+const settingIcon = document.querySelectorAll('.off-screen-menu ul li a img')[2];
 
 hamburgerMenu.addEventListener('click', () => {
   offScreenMenu.classList.add('active');
@@ -44,14 +45,17 @@ window.addEventListener('click',function(event){
 if (window.innerWidth >= 992) {
   bookIcon.setAttribute('src', 'src/images/icon/book-black.svg');
   addDataIcon.setAttribute('src', 'src/images/icon/add-data-black.svg');
+  settingIcon.setAttribute('src', 'src/images/icon/setting-icon-black.svg');
 }
 
 window.addEventListener('resize', function() {
   if (window.innerWidth >= 992) {
     bookIcon.setAttribute('src', 'src/images/icon/book-black.svg');
     addDataIcon.setAttribute('src', 'src/images/icon/add-data-black.svg');
+    settingIcon.setAttribute('src', 'src/images/icon/setting-icon-black.svg');
   } else {
     bookIcon.setAttribute('src', 'src/images/icon/book.svg');
     addDataIcon.setAttribute('src', 'src/images/icon/add-data.svg');
+    settingIcon.setAttribute('src', 'src/images/icon/setting-icon.svg');
   }
 });

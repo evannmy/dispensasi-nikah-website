@@ -64,7 +64,7 @@ main h1 {
 }
 
 main span {
-  color: #4c9a2a;
+  color: #4b8352;
 }
 
 main p {
@@ -73,7 +73,7 @@ main p {
 
 .button {
   padding: 7px 14px;
-  background-color: #4c9a2a;
+  background-color: #4b8352;
   border-radius: 5px;
   cursor: pointer;
   color: white;

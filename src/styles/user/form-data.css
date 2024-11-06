@@ -20,7 +20,7 @@ body {
   justify-content: center;
   align-items: center;
   font-family: sans-serif;
-  background-color: #197855;
+  background-color: #4b8352;
   padding: 10px;
 }
 
@@ -46,7 +46,7 @@ main {
 }
 
 .header {
-  color: #197855;
+  color: #4b8352;
   font-weight: bold;
 }
 
@@ -80,7 +80,7 @@ input:not([type="submit"]) {
 input[type="submit"] {
   width: auto;
   margin-top: 15px;
-  background-color: #197855;
+  background-color: #4b8352;
   color: white;
   border: none;
   padding: 5px 10px;

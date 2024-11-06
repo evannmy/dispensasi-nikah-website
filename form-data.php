@@ -62,6 +62,12 @@
               Input Data
             </a>
           </li>
+          <li>
+            <a href="setting.php">
+              <img src="src/images/icon/setting-icon.svg" alt="setting-icon">
+              Pengaturan
+            </a>
+          </li>
         </ul>
       </div>
   
@@ -76,11 +82,11 @@
     
                 <!-- input name -->
                 <label for="hName">Nama Lengkap: </label>
-                <input type="text" name="hName" id="hName" placeholder="Masukkan nama" required>
+                <input type="text" name="hName" id="hName" placeholder="Masukkan nama calon suami" required>
         
                 <!-- input place of birth -->
                 <label for="hPlaceOfBirth">Tempat Lahir: </label>
-                <input type="text" name="hPlaceOfBirth" id="hPlaceOfBirth" placeholder="Masukkan tempat lahir" required>
+                <input type="text" name="hPlaceOfBirth" id="hPlaceOfBirth" placeholder="Masukkan tempat lahir calon suami" required>
         
                 <!-- input date of birth-->
                 <label for="hDateOfBirth">Tanggal Lahir: </label>
@@ -89,11 +95,11 @@
                 <!-- select religion -->
                 <label for="hReligion">Agama: </label>
                 <select name="hReligion" id="hReligion">
-                  <option value="islam">Islam</option>
-                  <option value="kristen">Kristen</option>
-                  <option value="hindu">Hindu</option>
-                  <option value="buddha">Buddha</option>
-                  <option value="konghucu">Konghucu</option>
+                  <option value="Islam">Islam</option>
+                  <option value="Kristen">Kristen</option>
+                  <option value="Hindu">Hindu</option>
+                  <option value="Buddha">Buddha</option>
+                  <option value="Konghucu">Konghucu</option>
                 </select>
         
                 <!-- input job -->
@@ -115,11 +121,11 @@
                 <p>Data Calon <span style="color: #FF99BE">Istri</span></p>
                 <!-- input name -->
                 <label for="wName">Nama Lengkap: </label>
-                <input type="text" name="wName" id="wName" placeholder="Masukkan nama" required>
+                <input type="text" name="wName" id="wName" placeholder="Masukkan nama calon istri" required>
         
                 <!-- input place of birth -->
                 <label for="wPlaceOfBirth">Tempat Lahir: </label>
-                <input type="text" name="wPlaceOfBirth" id="wPlaceOfBirth" placeholder="Masukkan tempat lahir" required>
+                <input type="text" name="wPlaceOfBirth" id="wPlaceOfBirth" placeholder="Masukkan tempat lahir calon istri" required>
         
                 <!-- input date of birth-->
                 <label for="wDateOfBirth">Tanggal Lahir: </label>
@@ -128,11 +134,11 @@
                 <!-- select religion -->
                 <label for="wReligion">Agama: </label>
                 <select name="wReligion" id="wReligion">
-                  <option value="islam">Islam</option>
-                  <option value="kristen">Kristen</option>
-                  <option value="hindu">Hindu</option>
-                  <option value="buddha">Buddha</option>
-                  <option value="konghucu">Konghucu</option>
+                  <option value="Islam">Islam</option>
+                  <option value="Kristen">Kristen</option>
+                  <option value="Hindu">Hindu</option>
+                  <option value="Buddha">Buddha</option>
+                  <option value="Konghucu">Konghucu</option>
                 </select>
         
                 <!-- input job -->
@@ -146,6 +152,27 @@
                 <!-- input address -->
                 <label for="wAddress">Alamat: </label>
                 <textarea name="wAddress" id="wAddress" rows="3" cols="40" maxlength="100" required></textarea>
+              </div>
+
+              <hr>
+  
+              <div class="input-3">
+                <p>Waktu <span style="color: #e7c27d">Pernikahan</span></p>
+                <!-- input day of marriage -->
+                <label for="dayOfMarriage">Hari: </label>
+                <input type="text" name="dayOfMarriage" id="dayOfMarriage" placeholder="Masukkan hari" required>
+        
+                <!-- input date of marriage-->
+                <label for="dateOfMarriage">Tanggal: </label>
+                <input type="date" name="dateOfMarriage" id="dateOfMarriage" required>
+
+                <!-- input time of marriage-->
+                <label for="timeOfMarriage">Jam: </label>
+                <input type="time" name="timeOfMarriage" id="timeOfMarriage" required>
+        
+                <!-- select place of marriage -->
+                <label for="placeOfMarriage">Tempat: </label>
+                <input type="text" name="placeOfMarriage" id="placeOfMarriage" placeholder="Masukkan tempat pernikahan" required>
               </div>
             </div>
 

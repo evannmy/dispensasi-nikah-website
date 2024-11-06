@@ -4,6 +4,7 @@
   $data = getSpecificData($_GET);
   $dataSuami = $data['data_suami'];
   $dataIstri = $data['data_istri'];
+  $dataWaktuPernikahan = $data['data_waktu_pernikahan'];
 
   if (isset($_POST['submit'])) {
     updateData($_POST);
@@ -61,9 +62,15 @@
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="form-data.php">
               <img src="src/images/icon/add-data.svg" alt="add-data-icon">
               Input Data
+            </a>
+          </li>
+          <li>
+            <a href="setting.php">
+              <img src="src/images/icon/setting-icon.svg" alt="setting-icon">
+              Pengaturan
             </a>
           </li>
         </ul>
@@ -72,7 +79,7 @@
       <main>
       <p class="header">Update Data</p>
       <section>
-        <p>Update Data</p>
+        <!-- <p>Update Data</p> -->
         <div class="form-section">
           <form action="" method="post">
             <div class="input-container">
@@ -111,7 +118,7 @@
         
                 <!-- input address -->
                 <label for="hAddress">Alamat: </label>
-                <textarea name="hAddress" id="hAddress" rows="3" cols="40" maxlength="100" required> <?= $dataSuami['alamat'] ?> </textarea>
+                <textarea name="hAddress" id="hAddress" rows="3" cols="40" maxlength="100" required><?= $dataSuami['alamat'] ?></textarea>
               </div>
   
               <hr>
@@ -150,7 +157,28 @@
         
                 <!-- input address -->
                 <label for="wAddress">Alamat: </label>
-                <textarea name="wAddress" id="wAddress" rows="3" cols="40" maxlength="100" required> <?= $dataIstri['alamat'] ?> </textarea>
+                <textarea name="wAddress" id="wAddress" rows="3" cols="40" maxlength="100" required><?= $dataIstri['alamat'] ?></textarea>
+              </div>
+
+              <hr>
+
+              <div class="input-3">
+                <p>Waktu <span style="color: #e7c27d">Pernikahan</span></p>
+                <!-- input day of marriage -->
+                <label for="dayOfMarriage">Hari: </label>
+                <input type="text" name="dayOfMarriage" id="dayOfMarriage" placeholder="Masukkan hari" value="<?= $dataWaktuPernikahan['hari'] ?>" required>
+        
+                <!-- input date of marriage-->
+                <label for="dateOfMarriage">Tanggal: </label>
+                <input type="date" name="dateOfMarriage" id="dateOfMarriage" value="<?= $dataWaktuPernikahan['tanggal'] ?>" required>
+
+                <!-- input time of marriage-->
+                <label for="timeOfMarriage">Jam: </label>
+                <input type="time" name="timeOfMarriage" id="timeOfMarriage" value="<?= timeWithoutSecond($dataWaktuPernikahan['jam']) ?>" required>
+        
+                <!-- select place of marriage -->
+                <label for="placeOfMarriage">Tempat: </label>
+                <input type="text" name="placeOfMarriage" id="placeOfMarriage" placeholder="Masukkan tempat pernikahan" value="<?= $dataWaktuPernikahan['tempat'] ?>" required>
               </div>
             </div>
 

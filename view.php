@@ -4,6 +4,7 @@
   $data = getSpecificData($_GET);
   $dataSuami = $data['data_suami'];
   $dataIstri = $data['data_istri'];
+  $dataWaktuPernikahan = $data['data_waktu_pernikahan'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -62,6 +63,12 @@
               Input Data
             </a>
           </li>
+          <li>
+            <a href="setting.php">
+              <img src="src/images/icon/setting-icon.svg" alt="setting-icon">
+              Pengaturan
+            </a>
+          </li>
         </ul>
       </div>
   
@@ -76,90 +83,121 @@
           </div>
 
           <div class="data-table">
-            <div class="table-1">
-              <p>Data <span style="color: #4E88C4">Suami</span></p>
+            <div class="table-container">
+              <div class="table-1">
+                <p>Data <span style="color: #4E88C4">Suami</span></p>
+      
+                <table>
+                  <tr>
+                    <td>Nama</td>
+                    <td>:</td>
+                    <td><?= $dataSuami['nama'] ?></td>
+                  </tr>
+                  <tr>
+                    <td>Tempat Lahir</td>
+                    <td>:</td>
+                    <td><?= $dataSuami['tempat_lahir'] ?></td>
+                  </tr>
+                  <tr>
+                    <td>Tanggal Lahir</td>
+                    <td>:</td>
+                    <td><?= indonesianDate($dataSuami['tanggal_lahir']) ?></td>
+                  </tr>
+                  <tr>
+                    <td>Agama</td>
+                    <td>:</td>
+                    <td><?= $dataSuami['agama'] ?></td>
+                  </tr>
+                  <tr>
+                    <td>Pekerjaan</td>
+                    <td>:</td>
+                    <td><?= $dataSuami['pekerjaan'] ?></td>
+                  </tr>
+                  <tr>
+                    <td>Status Nikah</td>
+                    <td>:</td>
+                    <td><?= $dataSuami['status_nikah'] ?></td>
+                  </tr>
+                  <tr>
+                    <td>Alamat</td>
+                    <td>:</td>
+                    <td><?= $dataSuami['alamat'] ?></td>
+                  </tr>
+                </table>
+              </div>
     
-              <table>
-                <tr>
-                  <td>Nama</td>
-                  <td>:</td>
-                  <td><?= $dataSuami['nama'] ?></td>
-                </tr>
-                <tr>
-                  <td>Tempat Lahir</td>
-                  <td>:</td>
-                  <td><?= $dataSuami['tempat_lahir'] ?></td>
-                </tr>
-                <tr>
-                  <td>Tanggal Lahir</td>
-                  <td>:</td>
-                  <td><?= $dataSuami['tanggal_lahir'] ?></td>
-                </tr>
-                <tr>
-                  <td>Agama</td>
-                  <td>:</td>
-                  <td><?= $dataSuami['agama'] ?></td>
-                </tr>
-                <tr>
-                  <td>Pekerjaan</td>
-                  <td>:</td>
-                  <td><?= $dataSuami['pekerjaan'] ?></td>
-                </tr>
-                <tr>
-                  <td>Status Nikah</td>
-                  <td>:</td>
-                  <td><?= $dataSuami['status_nikah'] ?></td>
-                </tr>
-                <tr>
-                  <td>Alamat</td>
-                  <td>:</td>
-                  <td><?= $dataSuami['alamat'] ?></td>
-                </tr>
-              </table>
-            </div>
-  
-            <hr>
-  
-            <div class="table-2">
-              <p>Data <span style="color: #FF99BE">Istri</span></p>
+              <hr>
     
-              <table>
-              <tr>
-                  <td>Nama</td>
-                  <td>:</td>
-                  <td><?= $dataIstri['nama'] ?></td>
-                </tr>
+              <div class="table-2">
+                <p>Data <span style="color: #FF99BE">Istri</span></p>
+      
+                <table>
                 <tr>
-                  <td>Tempat Lahir</td>
-                  <td>:</td>
-                  <td><?= $dataIstri['tempat_lahir'] ?></td>
-                </tr>
+                    <td>Nama</td>
+                    <td>:</td>
+                    <td><?= $dataIstri['nama'] ?></td>
+                  </tr>
+                  <tr>
+                    <td>Tempat Lahir</td>
+                    <td>:</td>
+                    <td><?= $dataIstri['tempat_lahir'] ?></td>
+                  </tr>
+                  <tr>
+                    <td>Tanggal Lahir</td>
+                    <td>:</td>
+                    <td><?= indonesianDate($dataIstri['tanggal_lahir']) ?></td>
+                  </tr>
+                  <tr>
+                    <td>Agama</td>
+                    <td>:</td>
+                    <td><?= $dataIstri['agama'] ?></td>
+                  </tr>
+                  <tr>
+                    <td>Pekerjaan</td>
+                    <td>:</td>
+                    <td><?= $dataIstri['pekerjaan'] ?></td>
+                  </tr>
+                  <tr>
+                    <td>Status Nikah</td>
+                    <td>:</td>
+                    <td><?= $dataIstri['status_nikah'] ?></td>
+                  </tr>
+                  <tr>
+                    <td>Alamat</td>
+                    <td>:</td>
+                    <td><?= $dataIstri['alamat'] ?></td>
+                  </tr>
+                </table>
+              </div>
+
+              <hr>
+  
+              <div class="table-3">
+                <p>Waktu <span style="color: #e7c27d">Pernikahan</span></p>
+      
+                <table>
                 <tr>
-                  <td>Tanggal Lahir</td>
-                  <td>:</td>
-                  <td><?= $dataIstri['tanggal_lahir'] ?></td>
-                </tr>
-                <tr>
-                  <td>Agama</td>
-                  <td>:</td>
-                  <td><?= $dataIstri['agama'] ?></td>
-                </tr>
-                <tr>
-                  <td>Pekerjaan</td>
-                  <td>:</td>
-                  <td><?= $dataIstri['pekerjaan'] ?></td>
-                </tr>
-                <tr>
-                  <td>Status Nikah</td>
-                  <td>:</td>
-                  <td><?= $dataIstri['status_nikah'] ?></td>
-                </tr>
-                <tr>
-                  <td>Alamat</td>
-                  <td>:</td>
-                  <td><?= $dataIstri['alamat'] ?></td>
-                </tr>
-              </table>
+                    <td>Hari</td>
+                    <td>:</td>
+                    <td><?= $dataWaktuPernikahan['hari'] ?></td>
+                  </tr>
+                  <tr>
+                    <td>Tanggal</td>
+                    <td>:</td>
+                    <td><?= $dataWaktuPernikahan['tanggal'] ?></td>
+                  </tr>
+                  <tr>
+                    <td>Jam</td>
+                    <td>:</td>
+                    <td><?= formatTime($dataWaktuPernikahan['jam']) ?> WIB</td>
+                  </tr>
+                  <tr>
+                    <td>Tempat</td>
+                    <td>:</td>
+                    <td><?= $dataWaktuPernikahan['tempat'] ?></td>
+                  </tr>
+                </table>
+              </div>
             </div>
           </div>
         </div>

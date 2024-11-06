@@ -50,7 +50,7 @@ h1 {
   text-align: center;
   font-size: 1.7em;
   margin-bottom: 15px;
-  color: #197855;
+  color: #6c9f6d;
 }
 
 form {
@@ -77,7 +77,7 @@ input {
 input[type="submit"] {
   width: auto;
   margin-top: 10px;
-  background-color: #197855;
+  background-color: #6c9f6d;
   color: white;
   border: none;
   cursor: pointer;

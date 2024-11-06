@@ -61,6 +61,12 @@
               Input Data
             </a>
           </li>
+          <li>
+            <a href="setting.php">
+              <img src="src/images/icon/setting-icon.svg" alt="setting-icon">
+              Pengaturan
+            </a>
+          </li>
         </ul>
       </div>
   

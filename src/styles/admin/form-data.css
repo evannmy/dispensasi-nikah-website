@@ -19,14 +19,14 @@
 }
 
 body {
-  background-color: #197855;
+  background-color: #4b8352;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   position: fixed;
-  background-color: #197855;
+  background-color: #4b8352;
   width: 100%;
   padding: 10px;
 }
@@ -117,7 +117,7 @@ nav img:nth-child(2) {
   display: none;
   position: fixed;
   width: 40%;
-  background-color: #197855;
+  background-color: #4b8352;
   top: 0;
   bottom: 0;
   left: 0;
@@ -219,7 +219,7 @@ section {
 section hr {
   margin: 2em 0;
   width: 100%;
-  color: #197855;
+  color: #4b8352;
 }
 
 section p {
@@ -257,7 +257,7 @@ input:not([type="submit"]) {
 input[type="submit"] {
   width: auto;
   margin-top: 25px;
-  background-color: #197855;
+  background-color: #4b8352;
   color: white;
   border: none;
   padding: 5px 10px;
@@ -278,7 +278,7 @@ textarea {
   font-family: sans-serif;
   font-size: .8em;
   padding: 3px;
-  resize: vertical;
+  resize: none;
 }
 
 @media print, screen and (min-width: 768px) {
@@ -325,6 +325,10 @@ textarea {
     padding: 10px;
   }
 
+  main {
+    width: calc(100vw - 15% - 20px);
+  }
+
   .header {
     display: none;
   }
@@ -333,6 +337,7 @@ textarea {
     width: 100%;
     height: 100%;
     margin: 0;
+    overflow: scroll;
   }
 
   .icon-section {
@@ -385,21 +390,19 @@ textarea {
     display: flex;
   }
 
-  main {
-    width: 100%;
-  }
-
   main h1 {
     display: none;
   }
 
-  .input-1, .input-2 {
+  .input-1, .input-2, .input-3 {
     width: 40%;
+    padding: 20px;
   }
 
   input[type="submit"] {
     margin: auto;
-    margin-top: 3%;
+    margin-top: 1%;
+    margin-bottom: 10px;
     width: 8%;
     font-size: 0.9em;
     padding: 0;
@@ -407,17 +410,27 @@ textarea {
   }
 
   .off-screen-menu {
-    width: 20%;
+    width: 15%;
     border-radius: 10px;
     position: initial;
     display: flex;
     box-shadow: none;
     background-color: white;
+    padding-right: .75em;
+    padding-top: 10px;
   }
 
   .off-screen-menu ul {
     margin-top: 0;
     border: none;
+  }
+
+  .off-screen-menu li {
+    margin: 0;
+  }
+
+  .off-screen-menu li:not(:nth-child(1)) {
+    margin-top: 1em;
   }
 
   .off-screen-menu ul li a {
@@ -426,5 +439,9 @@ textarea {
 
   .off-screen-menu ul li a img {
     fill: black;
+  }
+
+  .input-3 input {
+    min-width: 311px;
   }
 }
