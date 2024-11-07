@@ -1,4 +1,11 @@
 <?php 
+  session_start();
+
+  if (!isset($_SESSION["login"])) {
+    header("location: index.php");
+    die;
+  }
+
   require_once 'utility/function.php';
 
   if (isset($_POST['submit'])) {
@@ -38,7 +45,7 @@
       <div class="user-dropdown">
         <ul>
           <li>
-            <a href="index.php">
+            <a href="logout.php">
               <img src="src/images/icon/logout-icon.svg" alt="logout-icon">
               Logout
             </a>

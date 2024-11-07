@@ -252,4 +252,32 @@
 
     return;
   }
+
+  function checkUser($username, $passwordInput) {
+    global $conn;
+
+    $passwordHash = password_hash($passwordInput, PASSWORD_DEFAULT);
+
+    $sqlFindUser = "SELECT * from users WHERE username='$username'";
+    $resultSqlFindUser = mysqli_query($conn, $sqlFindUser);
+
+    $numRows = mysqli_num_rows($resultSqlFindUser);
+
+    if ($numRows < 1) {
+      return;
+    }
+
+    $passwordDB = mysqli_fetch_assoc($resultSqlFindUser)['password'];
+
+    if ($username == "admin" && $passwordDB == $passwordInput) {
+      return true;
+    } 
+    // else if (password_verify($passwordInput, $passwordDB)) {
+    //   echo "test";
+    // }
+  }
+
+  // function changePassword($oldPasswordInput, $newPasswordInput, $retypePasswordInput) {
+  //   global $conn;
+  // }
 ?>

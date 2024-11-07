@@ -1,3 +1,18 @@
+<?php
+  session_start();
+
+  require_once 'utility/function.php';
+
+  if (isset($_POST["submit"])) {
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+
+    if (checkUser($username, $password)) {
+      header("location: dashboard.php");
+      $_SESSION["login"] = true;
+    }
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -23,17 +38,30 @@
       <div class="form-bg">
         
       </div>
-      <form>
+      <form method="post" action="">
         <!-- username input -->
-         <label for="username">Username: </label>
-         <input type="text" name="username" id="username" >
+        <label for="username">Username: </label>
+        <input type="text" name="username" id="username" required>
 
-         <!-- password input -->
-         <label for="password">Password: </label>
-         <input type="password" name="password" id="password">
+        <!-- password input -->
+        <label for="password">Password: </label>
+        <div class="input-password-container">
+          <input type="password" name="password" id="password" required>
+          <img src="src/images/icon/eye-close.svg" alt="eye icon">
+        </div>
 
-         <input type="submit" value="login">
+        <?php
+          if (isset($_POST["submit"])) {
+            if (checkUser($username, $password) != true) {
+              echo "<p class='warning'>Username/Password salah</p>";
+            }
+          }
+        ?>
+
+         <input type="submit" name="submit" value="login">
       </form>
     </main>
+
+  <script src="src/scripts/login-page.js"></script>
   </body>
 </html>

@@ -1,4 +1,16 @@
 <?php 
+  session_start();
+
+  if (!isset($_SESSION["login"])) {
+    header("location: index.php");
+    die;
+  }
+
+  if (!isset($_GET["id"])) {
+    header("location: dashboard.php");
+    die;
+  }
+
   require_once __DIR__ . '/vendor/autoload.php';
   require_once 'utility/function.php';
 

@@ -76,12 +76,36 @@ input {
 
 input[type="submit"] {
   width: auto;
-  margin-top: 10px;
+  margin-top: 20px;
   background-color: #6c9f6d;
   color: white;
   border: none;
   cursor: pointer;
   font-size: 1em;
+}
+
+.input-password-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-password-container input {
+  margin: 0;
+}
+
+.input-password-container img {
+  position: absolute;
+  right: 0;
+  width: 1.3em;
+  margin-right: 5px;
+}
+
+.warning {
+  color: #ff746c;
+  font-size: .9em;
+  margin-top: 5px;
 }
 
 @media print, screen and (min-width: 992px) {
@@ -105,6 +129,15 @@ input[type="submit"] {
 
   input:not([type="submit"]) {
     margin-bottom: 15px;
+  }
+
+  .input-password-container input {
+    margin: 0;
+    width: 100%;
+  }
+
+  input[type="submit"] {
+    margin-top: 25px;
   }
 
   label {

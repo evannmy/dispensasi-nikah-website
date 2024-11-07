@@ -1,8 +1,19 @@
 <?php
+  session_start();
+
+  if (!isset($_SESSION["login"])) {
+    header("location: index.php");
+    die;
+  }
+
   require_once 'utility/function.php';
 
   if (isset($_POST["mailNumberSubmit"])) {
     setMailNumber($_POST);
+  }
+
+  if (isset($_POST["changePasswordSubmit"])) {
+    changePassword($_POST["oldPassword"], $_POST["newPassword"], $_POST["retypePassword"]);
   }
 
   $nomorSurat = getMailNumber();
@@ -40,7 +51,7 @@
       <div class="user-dropdown">
         <ul>
           <li>
-            <a href="index.php">
+            <a href="logout.php">
               <img src="src/images/icon/logout-icon.svg" alt="logout-icon">
               Logout
             </a>
@@ -79,13 +90,43 @@
         <div class="content">
           <form action="" method="post">
             <label for="mailNumber">Nomor Surat:</label>
-            <input type="text" name="mailNumber" value="<?= $nomorSurat ?>">
+            <input type="text" name="mailNumber" id="mailNumber" value="<?= $nomorSurat ?>">
             <input type="submit" name="mailNumberSubmit" value="Simpan">
           </form>
+
+          <!-- <hr>
+
+          <form action="" method="post">
+            <label for="changePassword">Ubah password:</label>
+
+            <label for="oldPassword">Masukkan password lama:</label>
+            <div class="input-password-container">
+              <input type="password" id="oldPassword" name="oldPassword">
+              <img src="src/images/icon/eye-close.svg" alt="eye icon">
+            </div>
+
+            <label for="newPassword">Masukkan password baru:</label>
+            <div class="input-password-container">
+              <input type="password" id="newPassword" name="newPassword">
+              <img src="src/images/icon/eye-close.svg" alt="eye icon">
+            </div>
+
+            <label for="retypePassword">Masukkan ulang password baru:</label>
+            <div class="input-password-container">
+              <input type="password" id="retypePassword" name="retypePassword">
+              <img src="src/images/icon/eye-close.svg" alt="eye icon">
+            </div>
+
+            <div class="warning">
+              <p></p>
+            </div>
+
+            <input type="submit" name="changePasswordSubmit" value="Simpan">
+          </form> -->
         </div>
       </main>
     </div>
 
-  <script src="src/scripts/admin.js"></script>
+  <script src="src/scripts/setting-page.js"></script>
   </body>
 </html>

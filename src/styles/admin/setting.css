@@ -183,8 +183,16 @@ main h1 {
   display: block;
 }
 
+.content form label:nth-child(1) {
+  font-family: work-sans-bold, sans-serif;
+}
+
+.content form:nth-of-type(2) label:nth-child(1) {
+  margin-bottom: 1em;
+}
+
 .content form input {
-  width: 20em;
+  width: 250px;
   border-radius: 5px;
   border: 1px solid #999;
   padding: 3px;
@@ -203,6 +211,25 @@ main h1 {
   border: none;
   padding: 5px 10px;
   cursor: pointer;
+}
+
+.content form .input-password-container {
+  width: 250px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.content form .input-password-container input {
+  margin-top: 0;
+}
+
+.content form .input-password-container img {
+  position: absolute;
+  right: 0;
+  width: 1.3em;
+  margin-right: 5px;
 }
 
 .desktop-heading {
@@ -233,6 +260,22 @@ main h1 {
 
 .desktop-heading .logo {
   width: 40px;
+}
+
+hr {
+  margin: 1.5em 0;
+  width: 100%;
+  color: #4b8352;
+}
+
+.warning {
+  font-size: .9em;
+  color: darkred;
+  display: none;
+}
+
+.warning.active {
+  display: block;
 }
 
 @media print, screen and (min-width: 768px) {
