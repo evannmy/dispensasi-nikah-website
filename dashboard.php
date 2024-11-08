@@ -85,36 +85,38 @@
         </h1>
   
         <div class="data-page">
-          <table>
-            <tr>
-              <th>Nama</th>
-              <th>Tanggal Pengajuan</th>
-              <th>Aksi</th>
-            </tr>
-            <?php 
-              $result = "";
-              if (count($data['tanggalPengajuan']) == 0) {
-                $result .= "<td colspan='3' style='padding-top: 2em; font-weight: bold'>Belum ada data</td>";
-              } else {
-                foreach ($data['tanggalPengajuan'] as $tanggal) {
-                  $id = $data['namaSuami'][$i]['id'];
-                  $namaSuami = $data['namaSuami'][$i]['nama'];
-                  $tanggalPengajuan = $tanggal['tanggal_pengajuan'];
-                  $hanyaTanggal = date("d M Y", strtotime($tanggalPengajuan));
-
-                  $result .= "<tr>";
-                  $result .= "<td>" . "<a href='view.php?id=$id'>" . $namaSuami . "</td>";
-                  $result .= "<td>" . $hanyaTanggal . "</td>";
-                  $result .= "<td> <a href='print.php?id=$id'> <img src='src/images/icon/print.svg' alt='print-icon'> </a> </td>";
-                  $result .= "</tr>";
+          <div class="table-container">
+            <table>
+              <tr>
+                <th>Nama</th>
+                <th>Tanggal Pengajuan</th>
+                <th>Aksi</th>
+              </tr>
+              <?php 
+                $result = "";
+                if (count($data['tanggalPengajuan']) == 0) {
+                  $result .= "<td colspan='3' style='padding-top: 2em; font-weight: bold'>Belum ada data</td>";
+                } else {
+                  foreach ($data['tanggalPengajuan'] as $tanggal) {
+                    $id = $data['namaSuami'][$i]['id'];
+                    $namaSuami = $data['namaSuami'][$i]['nama'];
+                    $tanggalPengajuan = $tanggal['tanggal_pengajuan'];
+                    $hanyaTanggal = date("d M Y", strtotime($tanggalPengajuan));
   
-                  $i++;
+                    $result .= "<tr>";
+                    $result .= "<td>" . "<a href='view.php?id=$id'>" . $namaSuami . "</td>";
+                    $result .= "<td>" . $hanyaTanggal . "</td>";
+                    $result .= "<td> <a href='print.php?id=$id'> <img src='src/images/icon/print.svg' alt='print-icon'> </a> </td>";
+                    $result .= "</tr>";
+    
+                    $i++;
+                  }
                 }
-              }
-              echo $result;
-
-            ?>
-          </table>
+                echo $result;
+  
+              ?>
+            </table>
+          </div>
         </div>
     </div>
     </main>

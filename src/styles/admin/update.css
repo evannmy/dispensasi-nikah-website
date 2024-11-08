@@ -335,15 +335,8 @@ textarea {
   section {
     width: 100%;
     height: 100%;
-    display: flex;
-    /* flex-direction: column; */
     margin: 0;
-    overflow: scroll;
   }
-
-  /* section p {
-    text-align: center;
-  } */
 
   section > p {
     display: initial;
@@ -360,6 +353,7 @@ textarea {
     justify-content: space-around;
     align-items: center;
     padding: 0;
+    overflow: auto;
   }
 
   form {

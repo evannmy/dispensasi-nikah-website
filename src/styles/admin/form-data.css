@@ -337,7 +337,6 @@ textarea {
     width: 100%;
     height: 100%;
     margin: 0;
-    overflow: scroll;
   }
 
   .icon-section {
@@ -349,6 +348,7 @@ textarea {
     justify-content: space-around;
     align-items: center;
     padding: 0;
+    overflow: auto;
   }
 
   form {
