@@ -77,27 +77,30 @@
 
 
   // convert docx to pdf
-  use NcJoes\OfficeConverter\OfficeConverter;
+  if (PHP_OS_FAMILY == "Windows") {
+    // $libreOfficePath = '"C:\Program Files\LibreOffice\program\soffice.exe"';
 
-  $converter = new OfficeConverter('result/tmpResult.docx');
-  $converter->convertTo('tmpResult.pdf'); //generates pdf file in same directory as test-file.docx
-
+    $libreOfficePath = "C:\Program Files\LibreOffice\program\soffice.exe";
+    convertDocToPdf($libreOfficePath);
+  } else if (PHP_OS_FAMILY == "Linux") {
+    $libreOfficePath = "env HOME=/tmp libreoffice";
+    convertDocToPdf($libreOfficePath);
+  }
 
 
 
   // show pdf in browser
 
   // Store the file name into variable
-  $file = 'result/tmpResult.pdf';
+  $filePath = getcwd() . '/result/tmpResult.pdf';
   $filename = 'dispensasi-nikah.pdf';
   
   // Header content type
   header('Content-type: application/pdf');
-  header('Content-Disposition: inline;
-  filename="' . $filename . '"');
+  header('Content-Disposition: inline; filename="' . $filename . '"');
   header('Content-Transfer-Encoding: binary');
   header('Accept-Ranges: bytes');
   
   // Read the file
-  @readfile($file);
+  @readfile($filePath);
 ?>

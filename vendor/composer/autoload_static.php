@@ -12,10 +12,6 @@ class ComposerStaticInit175f515b2811e085f3258b59792b25af
             'PhpOffice\\PhpWord\\' => 18,
             'PhpOffice\\Math\\' => 15,
         ),
-        'N' => 
-        array (
-            'NcJoes\\OfficeConverter\\' => 23,
-        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -26,10 +22,6 @@ class ComposerStaticInit175f515b2811e085f3258b59792b25af
         'PhpOffice\\Math\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpoffice/math/src/Math',
-        ),
-        'NcJoes\\OfficeConverter\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/ncjoes/office-converter/src/OfficeConverter',
         ),
     );
 

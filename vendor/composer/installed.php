@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => '__root__',
-        'pretty_version' => 'dev-master',
-        'version' => 'dev-master',
-        'reference' => '882fc329b1d706c48951c86c6a456c0fdfc5e7c8',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => 'bbccaa5fc9c72408eb722d9a6218946b1d8ce79d',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,20 +11,11 @@
     ),
     'versions' => array(
         '__root__' => array(
-            'pretty_version' => 'dev-master',
-            'version' => 'dev-master',
-            'reference' => '882fc329b1d706c48951c86c6a456c0fdfc5e7c8',
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => 'bbccaa5fc9c72408eb722d9a6218946b1d8ce79d',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
-            'aliases' => array(),
-            'dev_requirement' => false,
-        ),
-        'ncjoes/office-converter' => array(
-            'pretty_version' => 'v1.0.5',
-            'version' => '1.0.5.0',
-            'reference' => '292339ae129ce2defdd1a4bf83f399fb3f2183f7',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../ncjoes/office-converter',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
