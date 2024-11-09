@@ -90,7 +90,7 @@
         <div class="content">
           <form action="" method="post">
             <label for="mailNumber">Nomor Surat:</label>
-            <input type="text" name="mailNumber" id="mailNumber" value="<?= $nomorSurat ?>">
+            <input type="text" name="mailNumber" id="mailNumber" maxlength="50" value="<?= $nomorSurat ?>">
             <input type="submit" name="mailNumberSubmit" value="Simpan">
           </form>
 

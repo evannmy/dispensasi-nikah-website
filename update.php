@@ -100,15 +100,15 @@
     
                 <!-- input name -->
                 <label for="hName">Nama Lengkap: </label>
-                <input type="text" name="hName" id="hName" placeholder="Masukkan nama" value="<?= $dataSuami['nama'] ?>" required>
+                <input type="text" name="hName" id="hName" placeholder="Masukkan nama" maxlength="100" value="<?= $dataSuami['nama'] ?>" required>
         
                 <!-- input place of birth -->
                 <label for="hPlaceOfBirth">Tempat Lahir: </label>
-                <input type="text" name="hPlaceOfBirth" id="hPlaceOfBirth" placeholder="Masukkan tempat lahir" value="<?= $dataSuami['tempat_lahir'] ?>" required>
+                <input type="text" name="hPlaceOfBirth" id="hPlaceOfBirth" placeholder="Masukkan tempat lahir" maxlength="100" value="<?= $dataSuami['tempat_lahir'] ?>" required>
         
                 <!-- input date of birth-->
                 <label for="hDateOfBirth">Tanggal Lahir: </label>
-                <input type="date" name="hDateOfBirth" id="hDateOfBirth" value="<?= $dataSuami['tanggal_lahir'] ?>" required>
+                <input type="date" name="hDateOfBirth" id="hDateOfBirth" max="9999-12-31" value="<?= $dataSuami['tanggal_lahir'] ?>" required>
         
                 <!-- select religion -->
                 <label for="hReligion">Agama: </label>
@@ -122,15 +122,15 @@
         
                 <!-- input job -->
                 <label for="hJob">Pekerjaan: </label>
-                <input type="text" name="hJob" id="hJob" placeholder="Masukkan pekerjaan calon suami" value="<?= $dataSuami['pekerjaan'] ?>" required>
+                <input type="text" name="hJob" id="hJob" placeholder="Masukkan pekerjaan calon suami" maxlength="50" value="<?= $dataSuami['pekerjaan'] ?>" required>
         
                 <!-- married status -->
                 <label for="hMarriedStatus">Status Nikah: </label>
-                <input type="text" name="hMarriedStatus" id="hMarriedStatus" placeholder="Masukkan status nikah saat ini" value="<?= $dataSuami['status_nikah'] ?>" required>
+                <input type="text" name="hMarriedStatus" id="hMarriedStatus" placeholder="Masukkan status nikah saat ini" maxlength="50" value="<?= $dataSuami['status_nikah'] ?>" required>
         
                 <!-- input address -->
                 <label for="hAddress">Alamat: </label>
-                <textarea name="hAddress" id="hAddress" rows="3" cols="40" maxlength="100" required><?= $dataSuami['alamat'] ?></textarea>
+                <textarea name="hAddress" id="hAddress" rows="3" cols="40" maxlength="100" maxlength="100" required><?= $dataSuami['alamat'] ?></textarea>
               </div>
   
               <hr>
@@ -139,15 +139,15 @@
                 <p>Data Calon <span style="color: #FF99BE">Istri</span></p>
                 <!-- input name -->
                 <label for="wName">Nama Lengkap: </label>
-                <input type="text" name="wName" id="wName" placeholder="Masukkan nama" value="<?= $dataIstri['nama'] ?>" required>
+                <input type="text" name="wName" id="wName" placeholder="Masukkan nama" maxlength="100" value="<?= $dataIstri['nama'] ?>" required>
         
                 <!-- input place of birth -->
                 <label for="wPlaceOfBirth">Tempat Lahir: </label>
-                <input type="text" name="wPlaceOfBirth" id="wPlaceOfBirth" placeholder="Masukkan tempat lahir" value="<?= $dataIstri['tempat_lahir'] ?>" required>
+                <input type="text" name="wPlaceOfBirth" id="wPlaceOfBirth" placeholder="Masukkan tempat lahir" maxlength="100" value="<?= $dataIstri['tempat_lahir'] ?>" required>
         
                 <!-- input date of birth-->
                 <label for="wDateOfBirth">Tanggal Lahir: </label>
-                <input type="date" name="wDateOfBirth" id="wDateOfBirth" value="<?= $dataIstri['tanggal_lahir'] ?>" required>
+                <input type="date" name="wDateOfBirth" id="wDateOfBirth" max="9999-12-31" value="<?= $dataIstri['tanggal_lahir'] ?>" required>
         
                 <!-- select religion -->
                 <label for="wReligion">Agama: </label>
@@ -161,11 +161,11 @@
         
                 <!-- input job -->
                 <label for="wJob">Pekerjaan: </label>
-                <input type="text" name="wJob" id="wJob" placeholder="Masukkan pekerjaan calon istri" value="<?= $dataIstri['pekerjaan'] ?>" required>
+                <input type="text" name="wJob" id="wJob" placeholder="Masukkan pekerjaan calon istri" maxlength="50" value="<?= $dataIstri['pekerjaan'] ?>" required>
         
                 <!-- married status -->
                 <label for="wMarriedStatus">Status Nikah: </label>
-                <input type="text" name="wMarriedStatus" id="wMarriedStatus" placeholder="Masukkan status nikah saat ini" value="<?= $dataIstri['status_nikah'] ?>" required>
+                <input type="text" name="wMarriedStatus" id="wMarriedStatus" placeholder="Masukkan status nikah saat ini" maxlength="50" value="<?= $dataIstri['status_nikah'] ?>" required>
         
                 <!-- input address -->
                 <label for="wAddress">Alamat: </label>
@@ -178,11 +178,11 @@
                 <p>Waktu <span style="color: #e7c27d">Pernikahan</span></p>
                 <!-- input day of marriage -->
                 <label for="dayOfMarriage">Hari: </label>
-                <input type="text" name="dayOfMarriage" id="dayOfMarriage" placeholder="Masukkan hari" value="<?= $dataWaktuPernikahan['hari'] ?>" required>
+                <input type="text" name="dayOfMarriage" id="dayOfMarriage" placeholder="Masukkan hari" maxlength="50" value="<?= $dataWaktuPernikahan['hari'] ?>" required>
         
                 <!-- input date of marriage-->
                 <label for="dateOfMarriage">Tanggal: </label>
-                <input type="date" name="dateOfMarriage" id="dateOfMarriage" value="<?= $dataWaktuPernikahan['tanggal'] ?>" required>
+                <input type="date" name="dateOfMarriage" id="dateOfMarriage" max="9999-12-31" value="<?= $dataWaktuPernikahan['tanggal'] ?>" required>
 
                 <!-- input time of marriage-->
                 <label for="timeOfMarriage">Jam: </label>
@@ -190,7 +190,7 @@
         
                 <!-- select place of marriage -->
                 <label for="placeOfMarriage">Tempat: </label>
-                <input type="text" name="placeOfMarriage" id="placeOfMarriage" placeholder="Masukkan tempat pernikahan" value="<?= $dataWaktuPernikahan['tempat'] ?>" required>
+                <input type="text" name="placeOfMarriage" id="placeOfMarriage" placeholder="Masukkan tempat pernikahan" maxlength="50" value="<?= $dataWaktuPernikahan['tempat'] ?>" required>
               </div>
             </div>
 

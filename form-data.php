@@ -89,15 +89,15 @@
     
                 <!-- input name -->
                 <label for="hName">Nama Lengkap: </label>
-                <input type="text" name="hName" id="hName" placeholder="Masukkan nama calon suami" required>
+                <input type="text" name="hName" id="hName" placeholder="Masukkan nama calon suami" maxlength="100" required>
         
                 <!-- input place of birth -->
                 <label for="hPlaceOfBirth">Tempat Lahir: </label>
-                <input type="text" name="hPlaceOfBirth" id="hPlaceOfBirth" placeholder="Masukkan tempat lahir calon suami" required>
+                <input type="text" name="hPlaceOfBirth" id="hPlaceOfBirth" placeholder="Masukkan tempat lahir calon suami" maxlength="100" required>
         
                 <!-- input date of birth-->
                 <label for="hDateOfBirth">Tanggal Lahir: </label>
-                <input type="date" name="hDateOfBirth" id="hDateOfBirth" required>
+                <input type="date" name="hDateOfBirth" id="hDateOfBirth" max="9999-12-31" required>
         
                 <!-- select religion -->
                 <label for="hReligion">Agama: </label>
@@ -111,11 +111,11 @@
         
                 <!-- input job -->
                 <label for="hJob">Pekerjaan: </label>
-                <input type="text" name="hJob" id="hJob" placeholder="Masukkan pekerjaan calon suami" required>
+                <input type="text" name="hJob" id="hJob" placeholder="Masukkan pekerjaan calon suami" maxlength="50" required>
         
                 <!-- married status -->
                 <label for="hMarriedStatus">Status Nikah: </label>
-                <input type="text" name="hMarriedStatus" id="hMarriedStatus" placeholder="Masukkan status nikah saat ini" required>
+                <input type="text" name="hMarriedStatus" id="hMarriedStatus" placeholder="Masukkan status nikah saat ini" maxlength="50" required>
         
                 <!-- input address -->
                 <label for="hAddress">Alamat: </label>
@@ -128,15 +128,15 @@
                 <p>Data Calon <span style="color: #FF99BE">Istri</span></p>
                 <!-- input name -->
                 <label for="wName">Nama Lengkap: </label>
-                <input type="text" name="wName" id="wName" placeholder="Masukkan nama calon istri" required>
+                <input type="text" name="wName" id="wName" placeholder="Masukkan nama calon istri" maxlength="100" required>
         
                 <!-- input place of birth -->
                 <label for="wPlaceOfBirth">Tempat Lahir: </label>
-                <input type="text" name="wPlaceOfBirth" id="wPlaceOfBirth" placeholder="Masukkan tempat lahir calon istri" required>
+                <input type="text" name="wPlaceOfBirth" id="wPlaceOfBirth" placeholder="Masukkan tempat lahir calon istri" maxlength="100" required>
         
                 <!-- input date of birth-->
                 <label for="wDateOfBirth">Tanggal Lahir: </label>
-                <input type="date" name="wDateOfBirth" id="wDateOfBirth" required>
+                <input type="date" name="wDateOfBirth" id="wDateOfBirth" max="9999-12-31" required>
         
                 <!-- select religion -->
                 <label for="wReligion">Agama: </label>
@@ -150,11 +150,11 @@
         
                 <!-- input job -->
                 <label for="wJob">Pekerjaan: </label>
-                <input type="text" name="wJob" id="wJob" placeholder="Masukkan pekerjaan calon istri" required>
+                <input type="text" name="wJob" id="wJob" placeholder="Masukkan pekerjaan calon istri" maxlength="50" required>
         
                 <!-- married status -->
                 <label for="wMarriedStatus">Status Nikah: </label>
-                <input type="text" name="wMarriedStatus" id="wMarriedStatus" placeholder="Masukkan status nikah saat ini" required>
+                <input type="text" name="wMarriedStatus" id="wMarriedStatus" placeholder="Masukkan status nikah saat ini" maxlength="50" required>
         
                 <!-- input address -->
                 <label for="wAddress">Alamat: </label>
@@ -167,11 +167,11 @@
                 <p>Waktu <span style="color: #e7c27d">Pernikahan</span></p>
                 <!-- input day of marriage -->
                 <label for="dayOfMarriage">Hari: </label>
-                <input type="text" name="dayOfMarriage" id="dayOfMarriage" placeholder="Masukkan hari" required>
+                <input type="text" name="dayOfMarriage" id="dayOfMarriage" placeholder="Masukkan hari" maxlength="50" required>
         
                 <!-- input date of marriage-->
                 <label for="dateOfMarriage">Tanggal: </label>
-                <input type="date" name="dateOfMarriage" id="dateOfMarriage" required>
+                <input type="date" name="dateOfMarriage" id="dateOfMarriage" max="9999-12-31" required>
 
                 <!-- input time of marriage-->
                 <label for="timeOfMarriage">Jam: </label>
@@ -179,7 +179,7 @@
         
                 <!-- select place of marriage -->
                 <label for="placeOfMarriage">Tempat: </label>
-                <input type="text" name="placeOfMarriage" id="placeOfMarriage" placeholder="Masukkan tempat pernikahan" required>
+                <input type="text" name="placeOfMarriage" id="placeOfMarriage" placeholder="Masukkan tempat pernikahan" maxlength="50" required>
               </div>
             </div>
 
