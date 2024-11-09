@@ -78,14 +78,16 @@
 
   // convert docx to pdf
   if (PHP_OS_FAMILY == "Windows") {
-    // $libreOfficePath = '"C:\Program Files\LibreOffice\program\soffice.exe"';
-
-    $libreOfficePath = "C:\Program Files\LibreOffice\program\soffice.exe";
-    convertDocToPdf($libreOfficePath);
+    $libreOfficePath = '"C:\Program Files\LibreOffice\program\soffice.exe"';
+    $inputFile = getcwd() . "\\result\\tmpResult.docx";
+    $outputDir = getcwd() . "\\result";
   } else if (PHP_OS_FAMILY == "Linux") {
     $libreOfficePath = "env HOME=/tmp libreoffice";
-    convertDocToPdf($libreOfficePath);
+    $inputFile = getcwd() . "/result/tmpResult.docx";
+    $outputDir = getcwd() . "/result";
   }
+
+  convertDocToPdf($libreOfficePath, $inputFile, $outputDir);
 
 
 

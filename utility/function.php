@@ -313,13 +313,9 @@
     // }
   }
 
-  function convertDocToPdf($libreOfficePath) {
+  function convertDocToPdf($libreOfficePath, $inputFile, $outputDir) {
     // this function require libreoffice app
-
-    $inputFile = getcwd() . "/result/tmpResult.docx";
-    $outputDir = getcwd() . "/result";
-
-    exec("$libreOfficePath --headless --convert-to pdf $inputFile --outdir $outputDir");
+    exec("$libreOfficePath --headless --convert-to pdf \"$inputFile\" --outdir \"$outputDir\"");
   }
 
   // function changePassword($oldPasswordInput, $newPasswordInput, $retypePasswordInput) {
