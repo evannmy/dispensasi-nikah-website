@@ -256,6 +256,28 @@ main h1 {
   overflow: auto;
 }
 
+/* custom scrollbar */
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 8px;
+  background-color: #ebebeb;
+  border: 1px solid #d8dcda;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: #cececd;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #bfbfbf; 
+}
+
 @media print, screen and (min-width: 768px) {
   .data-page {
     width: 90%;
