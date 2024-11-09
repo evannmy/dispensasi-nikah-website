@@ -26,6 +26,9 @@
     <title>Detail Data</title>
     <link rel="icon" type="image/x-icon" href="src/images/icon/sidoarjo-regency-logo.ico">
     <link rel="stylesheet" href="src/styles/admin/view.css">
+    <link rel="stylesheet" href="src/styles/admin/sweet-alert.css">
+    <script src="src/scripts/sweetalert2.all.min.js"></script>
+    <script src="src/scripts/delete.js"></script>
   </head>
   <body>
 
@@ -90,7 +93,7 @@
             <div class="action-group">
               <a href="update.php?id=<?= $dataSuami['id'] ?>">Update</a>
               |
-              <a href="delete.php?id=<?= $dataSuami['id'] ?>" onclick="return confirm('Apakah anda yakin ingin menghapus data ini?')">Delete</a>
+              <a onclick="confirmationDelete(event)" href="delete.php?id=<?= $dataSuami['id'] ?>">Delete</a>
             </div>
           </div>
 

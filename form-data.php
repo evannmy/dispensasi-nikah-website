@@ -7,10 +7,6 @@
   }
 
   require_once 'utility/function.php';
-
-  if (isset($_POST['submit'])) {
-    insertData($_POST);
-  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,8 +16,15 @@
     <title>Form Data</title>
     <link rel="icon" type="image/x-icon" href="src/images/icon/sidoarjo-regency-logo.ico">
     <link rel="stylesheet" href="src/styles/admin/form-data.css">
+    <link rel="stylesheet" href="src/styles/admin/sweet-alert.css">
+    <script src="src/scripts/sweetalert2.all.min.js"></script>
   </head>
   <body>
+    <?php 
+      if (isset($_POST['submit'])) {
+        insertData($_POST);
+      }
+    ?>
 
     <div class="desktop-heading">
       <div class="logo-container">

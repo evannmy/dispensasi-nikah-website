@@ -76,11 +76,21 @@
     
     if (mysqli_query($conn, $sql) && mysqli_query($conn, $sql2) && mysqli_query($conn, $sql3)) {
       echo "<script>
-      alert('Data berhasil ditambahkan');
+        Swal.fire({
+          icon: 'success',
+          title: 'Data berhasil ditambahkan',
+          showConfirmButton: false,
+          timer: 1500
+        });
       </script>";
     } else {
       echo "<script>
-      alert('Data gagal ditambahkan');
+        Swal.fire({
+          icon: 'error',
+          title: 'Data gagal ditambahkan',
+          showConfirmButton: false,
+          timer: 1500
+        });
       </script>";
     }
 
@@ -164,14 +174,30 @@
     
     if (mysqli_query($conn, $sql) && mysqli_query($conn, $sql2) && mysqli_query($conn, $sql3)) {
       echo "<script>
-      alert('Data berhasil diperbarui');
-      window.location.href='view.php?id=$idSuami';
+        Swal.fire({
+          icon: 'success',
+          title: 'Data berhasil diperbarui',
+          showConfirmButton: false,
+          timer: 1500
+        });
+        setTimeout(function() {
+          window.location.href='view.php?id=$idSuami';
+        }, 1500);
       </script>";
     } else {
       echo "<script>
-      alert('Data gagal diperbarui');
+        Swal.fire({
+          icon: 'error',
+          title: 'Data gagal diperbarui',
+          showConfirmButton: false,
+          timer: 1500
+        });
       </script>";
     }
+  }
+
+  function deleteData($idDataSuami) {
+    echo $idDataSuami;
   }
 
   function indonesianDate($date) {
@@ -228,11 +254,21 @@
     
     if(mysqli_query($conn, $sql)) {
       echo "<script>
-      alert('Berhasil menyimpan perubahan');
+        Swal.fire({
+          icon: 'success',
+          title: 'Berhasil menyimpan nomor surat',
+          showConfirmButton: false,
+          timer: 1500
+        });
       </script>";
     } else {
       echo "<script>
-      alert('Gagal Menyimpan perubahan');
+        Swal.fire({
+          icon: 'error',
+          title: 'Gagal menyimpan nomor surat',
+          showConfirmButton: false,
+          timer: 1500
+        });
       </script>";
     }
   }

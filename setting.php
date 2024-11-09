@@ -8,13 +8,9 @@
 
   require_once 'utility/function.php';
 
-  if (isset($_POST["mailNumberSubmit"])) {
-    setMailNumber($_POST);
-  }
-
-  if (isset($_POST["changePasswordSubmit"])) {
-    changePassword($_POST["oldPassword"], $_POST["newPassword"], $_POST["retypePassword"]);
-  }
+  // if (isset($_POST["changePasswordSubmit"])) {
+  //   changePassword($_POST["oldPassword"], $_POST["newPassword"], $_POST["retypePassword"]);
+  // }
 
   $nomorSurat = getMailNumber();
 ?>
@@ -26,8 +22,16 @@
     <title>Pengaturan</title>
     <link rel="icon" type="image/x-icon" href="src/images/icon/sidoarjo-regency-logo.ico">
     <link rel="stylesheet" href="src/styles/admin/setting.css">
+    <link rel="stylesheet" href="src/styles/admin/sweet-alert.css">
+    <script src="src/scripts/sweetalert2.all.min.js"></script>
   </head>
   <body>
+
+    <?php 
+      if (isset($_POST["mailNumberSubmit"])) {
+        setMailNumber($_POST);
+      }
+    ?>
 
     <div class="desktop-heading">
       <div class="logo-container">
@@ -127,6 +131,7 @@
       </main>
     </div>
 
+  <script src="src/scripts/admin.js"></script>
   <script src="src/scripts/setting-page.js"></script>
   </body>
 </html>

@@ -1,0 +1,8 @@
+.swal2-shown .swal2-height-auto {
+  padding-right: 10px !important;
+}
+
+.swal2-popup {
+  font-family: sans-serif;
+  font-size: .85em !important;
+}

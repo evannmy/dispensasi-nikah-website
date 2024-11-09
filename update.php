@@ -17,10 +17,6 @@
   $dataSuami = $data['data_suami'];
   $dataIstri = $data['data_istri'];
   $dataWaktuPernikahan = $data['data_waktu_pernikahan'];
-
-  if (isset($_POST['submit'])) {
-    updateData($_POST);
-  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,8 +26,15 @@
     <title>Update Data</title>
     <link rel="icon" type="image/x-icon" href="src/images/icon/sidoarjo-regency-logo.ico">
     <link rel="stylesheet" href="src/styles/admin/update.css">
+    <link rel="stylesheet" href="src/styles/admin/sweet-alert.css">
+    <script src="src/scripts/sweetalert2.all.min.js"></script>
   </head>
   <body>
+    <?php 
+      if (isset($_POST['submit'])) {
+        updateData($_POST);
+      }
+    ?>
 
     <div class="desktop-heading">
       <div class="logo-container">
