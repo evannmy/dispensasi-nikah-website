@@ -19,6 +19,9 @@
     <title>Dashboard</title>
     <link rel="icon" type="image/x-icon" href="src/images/icon/sidoarjo-regency-logo.ico">
     <link rel="stylesheet" href="src/styles/admin/dashboard.css">
+    <link rel="stylesheet" href="src/styles/admin/sweet-alert.css">
+    <script src="src/scripts/sweetalert2.all.min.js"></script>
+    <script src="src/scripts/delete.js"></script>
   </head>
   <body>
 
@@ -106,7 +109,10 @@
                     $result .= "<tr>";
                     $result .= "<td>" . "<a href='view.php?id=$id'>" . $namaSuami . "</td>";
                     $result .= "<td>" . $hanyaTanggal . "</td>";
-                    $result .= "<td> <a href='print.php?id=$id'> <img src='src/images/icon/print.svg' alt='print-icon'> </a> </td>";
+                    $result .= "<td class='action'>
+                                  <a href='print.php?id=$id'> <img src='src/images/icon/print.svg' alt='print-icon'> </a>
+                                  <a href='delete.php?id=$id' onclick='confirmationDelete(event)'> <img src='src/images/icon/delete.svg' alt='delete-icon'> </a>
+                                </td>";
                     $result .= "</tr>";
     
                     $i++;

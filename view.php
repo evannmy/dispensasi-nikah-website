@@ -91,6 +91,8 @@
         <div class="data-page">
           <div class="action">
             <div class="action-group">
+              <a href="print.php?id=<?= $dataSuami['id'] ?>">Print</a>
+              |
               <a href="update.php?id=<?= $dataSuami['id'] ?>">Update</a>
               |
               <a onclick="confirmationDelete(event)" href="delete.php?id=<?= $dataSuami['id'] ?>">Delete</a>

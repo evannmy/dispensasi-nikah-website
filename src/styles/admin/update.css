@@ -113,6 +113,10 @@ nav img:nth-child(2) {
   font-family: work-sans, sans-serif;
 }
 
+.user-dropdown li a:hover {
+  color: #4b8352;
+}
+
 .off-screen-menu {
   display: none;
   position: fixed;
@@ -175,7 +179,7 @@ main h1 {
   color: white;
 }
 
-.desktop-heading img {
+.desktop-heading img:not(.logo) {
   width: 1.7em;
   cursor: pointer;
 }
@@ -466,6 +470,10 @@ textarea {
 
   .off-screen-menu ul li a {
     color: black;
+  }
+
+  .off-screen-menu ul li a:hover {
+    color: #4b8352;
   }
 
   .off-screen-menu ul li a img {
