@@ -63,7 +63,7 @@
     $agamaSuami = htmlspecialchars($postVar['hReligion']);
     $pekerjaanSuami = htmlspecialchars($postVar['hJob']);
     $statusNikahSuami = htmlspecialchars($postVar['hMarriedStatus']);
-    $alamatSuami = htmlspecialchars($postVar['hAddress']);
+    $alamatSuami = rtrim(htmlspecialchars($postVar['hAddress']));
 
     $namaIstri = htmlspecialchars($postVar['wName']);
     $tempatLahirIstri = htmlspecialchars($postVar['wPlaceOfBirth']);
@@ -71,7 +71,7 @@
     $agamaIstri = htmlspecialchars($postVar['wReligion']);
     $pekerjaanIstri = htmlspecialchars($postVar['wJob']);
     $statusNikahIstri = htmlspecialchars($postVar['wMarriedStatus']);
-    $alamatIstri = htmlspecialchars($postVar['wAddress']);
+    $alamatIstri = rtrim(htmlspecialchars($postVar['wAddress']));
 
     $hariPernikahan = htmlspecialchars($postVar['dayOfMarriage']);
     $tanggalPernikahan = htmlspecialchars($postVar['dateOfMarriage']);
@@ -155,7 +155,7 @@
     $agamaSuami = htmlspecialchars($postVar['hReligion']);
     $pekerjaanSuami = htmlspecialchars($postVar['hJob']);
     $statusNikahSuami = htmlspecialchars($postVar['hMarriedStatus']);
-    $alamatSuami = htmlspecialchars($postVar['hAddress']);
+    $alamatSuami = rtrim(htmlspecialchars($postVar['hAddress']));
 
     $sqlGetIdIstri = "SELECT id_istri FROM data_pemohon WHERE id_suami=$idSuami";
     
@@ -166,7 +166,7 @@
     $agamaIstri = htmlspecialchars($postVar['wReligion']);
     $pekerjaanIstri = htmlspecialchars($postVar['wJob']);
     $statusNikahIstri = htmlspecialchars($postVar['wMarriedStatus']);
-    $alamatIstri = htmlspecialchars($postVar['wAddress']);
+    $alamatIstri = rtrim(htmlspecialchars($postVar['wAddress']));
 
     $sqlGetIdWaktuPernikahan = "SELECT id_waktu_pernikahan FROM data_pemohon WHERE id_suami=$idSuami";
 
