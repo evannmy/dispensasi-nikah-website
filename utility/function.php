@@ -181,16 +181,9 @@
     $sql3 = "UPDATE waktu_pernikahan SET hari='$hariPernikahan', tanggal='$tanggalPernikahan', jam='$jamPernikahan', tempat='$tempatPernikahan' WHERE id=$idWaktuPernikahan";
     
     if (mysqli_query($conn, $sql) && mysqli_query($conn, $sql2) && mysqli_query($conn, $sql3)) {
+      $_SESSION['updateAlert'] = 'success';
       echo "<script>
-        Swal.fire({
-          icon: 'success',
-          title: 'Data berhasil diperbarui',
-          showConfirmButton: false,
-          timer: 1500
-        });
-        setTimeout(function() {
-          window.location.href='view.php?id=$idSuami';
-        }, 1500);
+        window.location.href='view.php?id=$idSuami';
       </script>";
     } else {
       echo "<script>
@@ -261,16 +254,9 @@
     }
     
     if(mysqli_query($conn, $sql)) {
+      $_SESSION['mailNumberAlert'] = 'success';
       echo "<script>
-        Swal.fire({
-          icon: 'success',
-          title: 'Berhasil menyimpan nomor surat',
-          showConfirmButton: false,
-          timer: 1500
-        });
-        setTimeout(function() {
-          window.location.href='setting.php';
-        }, 1500);
+        window.location.href='setting.php';
       </script>";
     } else {
       echo "<script>

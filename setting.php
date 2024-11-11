@@ -33,8 +33,21 @@
       if (isset($_POST["mailNumberSubmit"])) {
         setMailNumber($_POST);
       }
-    ?>
 
+      if (isset($_SESSION['mailNumberAlert']) && $_SESSION['mailNumberAlert'] == 'success') {
+        echo "<script>
+                Swal.fire({
+                  icon: 'success',
+                  title: 'Berhasil menyimpan nomor surat',
+                  showConfirmButton: false,
+                  timer: 1500
+                }).then(() => {
+                  // After the alert closes, call a PHP script to unset the session variable
+                  window.location.href='utility/unset-alert.php';
+                });
+              </script>";
+      }
+    ?>
     <div class="desktop-heading">
       <div class="logo-container">
         <img class="logo" src="src/images/icon/sidoarjo-regency-logo.svg" alt="Logo Kabupaten Sidoarjo">

@@ -31,6 +31,19 @@
     <script src="src/scripts/delete.js"></script>
   </head>
   <body>
+    <?php 
+      if (isset($_SESSION['updateAlert']) && $_SESSION['updateAlert'] == 'success') {
+        echo "<script>
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Data berhasil diperbarui',
+                    showConfirmButton: false,
+                    timer: 1500
+                  });
+              </script>";
+        unset($_SESSION['updateAlert']);
+      }
+    ?>
 
     <div class="desktop-heading">
       <div class="logo-container">
