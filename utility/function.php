@@ -197,10 +197,6 @@
     }
   }
 
-  function deleteData($idDataSuami) {
-    echo $idDataSuami;
-  }
-
   function indonesianDate($date) {
     $indonesianMonth = [
       1 => 'Januari',

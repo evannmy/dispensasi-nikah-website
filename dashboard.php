@@ -33,6 +33,21 @@
   </head>
   <body>
 
+    <?php 
+      if (isset($_SESSION['deleteAlert']) && $_SESSION['deleteAlert'] == 'success') {
+        echo "<script>
+                Swal.fire({
+                  title: 'Dihapus!',
+                  text: 'Data berhasil dihapus',
+                  icon: 'success',
+                  showConfirmButton: false,
+                  timer: 1500
+                });
+              </script>";
+        unset($_SESSION['deleteAlert']);
+      }
+    ?>
+
     <div class="desktop-heading">
       <div class="logo-container">
         <img class="logo" src="src/images/icon/sidoarjo-regency-logo.svg" alt="Logo Kabupaten Sidoarjo">

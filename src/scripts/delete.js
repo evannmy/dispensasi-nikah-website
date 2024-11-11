@@ -11,15 +11,7 @@ function confirmationDelete(event) {
     cancelButtonText: "Batal"
   }).then((result) => {
     if (result.isConfirmed) {
-      Swal.fire({
-        title: "Dihapus!",
-        text: "Data berhasil dihapus",
-        icon: "success",
-        showConfirmButton: false
-      });
-      setTimeout(function() {
-        window.location.href=urlToRedirect;
-      }, 1500);
+      window.location.href=urlToRedirect;
     }
   });
 }

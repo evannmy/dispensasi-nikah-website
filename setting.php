@@ -147,6 +147,5 @@
     </div>
 
   <script src="src/scripts/admin.js"></script>
-  <script src="src/scripts/setting-page.js"></script>
   </body>
 </html>

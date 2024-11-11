@@ -38,9 +38,8 @@
     $sqlDelWaktuPernikahan = "DELETE FROM waktu_pernikahan WHERE id=$idWaktuPernikahan";
 
     if (mysqli_query($conn, $sqlDelDataPemohon) && mysqli_query($conn, $sqlDelDataSuami) && mysqli_query($conn, $sqlDelDataIstri) && mysqli_query($conn, $sqlDelWaktuPernikahan)) {
-      echo "<script>
-      window.location.href='dashboard.php';
-      </script>";
+      $_SESSION['deleteAlert'] = 'success';
+      header("location: dashboard.php");
     } else {
       echo "<script>
           Swal.fire({
