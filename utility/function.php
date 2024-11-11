@@ -1,7 +1,7 @@
 <?php
   $servername = 'localhost';
   $username = 'root';
-  $password = 'evan_db123';
+  $password = '';
   $dbname = 'dispensasi_nikah';
 
   // create connection

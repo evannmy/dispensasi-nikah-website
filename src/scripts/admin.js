@@ -8,8 +8,6 @@ const userDropDown = document.querySelector('.user-dropdown');
 const bookIcon = document.querySelectorAll('.off-screen-menu ul li a img')[0];
 const addDataIcon = document.querySelectorAll('.off-screen-menu ul li a img')[1];
 const settingIcon = document.querySelectorAll('.off-screen-menu ul li a img')[2];
-const eyePasswordIcon = document.querySelectorAll('.content form .input-password-container img');
-const inputPassword = document.querySelectorAll('.content form .input-password-container input');
 const warningText = document.querySelector('.warning');
 const formSubmit = document.querySelector("form:nth-of-type(2) input[type='submit']");
 
