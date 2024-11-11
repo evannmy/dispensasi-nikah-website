@@ -13,6 +13,8 @@
   // }
 
   $nomorSurat = getMailNumber();
+
+  $identifier = "setting";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -68,19 +70,19 @@
         <img src="src/images/icon/hamburger-menu-close.svg" alt="hamburger menu close icon" class="hamburger-menu-close">
         <ul>
           <li>
-            <a href="dashboard.php">
+            <a href="dashboard.php" class="<?php if ($identifier == 'dashboard') echo 'active' ?>">
               <img src="src/images/icon/book.svg" alt="book-icon">
               Daftar Data
             </a>
           </li>
           <li>
-            <a href="form-data.php">
+            <a href="form-data.php" class="<?php if ($identifier == 'form-data') echo 'active' ?>">
               <img src="src/images/icon/add-data.svg" alt="add-data-icon">
               Input Data
             </a>
           </li>
           <li>
-            <a href="setting.php">
+            <a href="setting.php" class="<?php if ($identifier == 'setting') echo 'active' ?>">
               <img src="src/images/icon/setting-icon.svg" alt="setting-icon">
               Pengaturan
             </a>

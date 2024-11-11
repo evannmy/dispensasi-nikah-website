@@ -11,35 +11,43 @@
     die('Connection failed: '. mysqli_connect_error());
   }
 
-  function getSumData() {
+  function getSumData($search = "") {
     global $conn;
 
     $hNameRows = [];
-    $wNameRows = [];
     $dateRows = [];
 
-    $sql = 'SELECT id, nama FROM data_suami ORDER BY id DESC';
-    $sql2 = 'SELECT id, nama FROM data_istri ORDER BY id DESC';
-    $sql3 = 'SELECT tanggal_pengajuan FROM data_pemohon ORDER BY id DESC';
+    if (empty($search)) {
+      $sql = "SELECT id, nama FROM data_suami ORDER BY id DESC";
+      $sql2 = "SELECT tanggal_pengajuan FROM data_pemohon ORDER BY id DESC";
+
+      $retVal2 = mysqli_query($conn, $sql2);
+      while ($row = mysqli_fetch_assoc($retVal2)) {
+        $dateRows[] = $row;
+      }
+    } else {
+      $sql = "SELECT id, nama FROM data_suami WHERE nama LIKE '%$search%' ORDER BY id DESC";
+
+      $dateIdArray = [];
+      $retDateId = mysqli_query($conn, $sql);
+      while ($row = mysqli_fetch_assoc($retDateId)) {
+        $dateIdArray[] = $row['id'];
+      }
+
+      foreach($dateIdArray as $id) {
+        $sqlDate = "SELECT tanggal_pengajuan FROM data_pemohon WHERE id_suami=$id";
+        $date = mysqli_fetch_assoc(mysqli_query($conn, $sqlDate));
+        $dateRows[] = $date;
+      }
+    }
 
     $retVal1 = mysqli_query($conn, $sql);
     while ($row = mysqli_fetch_assoc($retVal1)) {
       $hNameRows[] = $row;
     }
 
-    $retVal2 = mysqli_query($conn, $sql2);
-    while ($row = mysqli_fetch_assoc($retVal2)) {
-      $wNameRows[] = $row;
-    }
-
-    $retVal3 = mysqli_query($conn, $sql3);
-    while ($row = mysqli_fetch_assoc($retVal3)) {
-      $dateRows[] = $row;
-    }
-
     $sumData = [
       "namaSuami" => $hNameRows,
-      "namaIstri" => $wNameRows,
       "tanggalPengajuan" => $dateRows
     ];
 
@@ -260,6 +268,9 @@
           showConfirmButton: false,
           timer: 1500
         });
+        setTimeout(function() {
+          window.location.href='setting.php';
+        }, 1500);
       </script>";
     } else {
       echo "<script>

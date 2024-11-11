@@ -8,8 +8,16 @@
 
   require_once 'utility/function.php';
 
-  $data = getSumData();
+  if (isset($_GET["search"]) && $_GET["search"] == "") {
+    header("location: dashboard.php");
+  } else if (isset($_GET["search"])) {
+    $data = getSumData($_GET["search"]);
+  } else {
+    $data = getSumData();
+  }
   $i = 0;
+
+  $identifier = "dashboard";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -60,19 +68,19 @@
         <img src="src/images/icon/hamburger-menu-close.svg" alt="hamburger menu close icon" class="hamburger-menu-close">
         <ul>
           <li>
-            <a href="">
+            <a href="dashboard.php" class="<?php if ($identifier == 'dashboard') echo 'active' ?>">
               <img src="src/images/icon/book.svg" alt="book-icon">
               Daftar Data
             </a>
           </li>
           <li>
-            <a href="form-data.php">
+            <a href="form-data.php" class="<?php if ($identifier == 'form-data') echo 'active' ?>">
               <img src="src/images/icon/add-data.svg" alt="add-data-icon">
               Input Data
             </a>
           </li>
           <li>
-            <a href="setting.php">
+            <a href="setting.php" class="<?php if ($identifier == 'setting') echo 'active' ?>">
               <img src="src/images/icon/setting-icon.svg" alt="setting-icon">
               Pengaturan
             </a>
@@ -88,17 +96,28 @@
         </h1>
   
         <div class="data-page">
+          <form action="" method="get">
+            <input type="text" name="search" placeholder="Masukkan nama yang ingin dicari" value="<?= isset($_GET['search'])? $_GET['search'] : '' ?>">
+            <input type="submit" value="Cari">
+          </form>
+
           <div class="table-container">
             <table>
-              <tr>
-                <th>Nama</th>
-                <th>Tanggal Pengajuan</th>
-                <th>Aksi</th>
-              </tr>
+              <thead>
+                <tr>
+                  <th>Nama</th>
+                  <th>Tanggal Pengajuan</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody>
               <?php 
                 $result = "";
-                if (count($data['tanggalPengajuan']) == 0) {
-                  $result .= "<td colspan='3' style='padding-top: 2em; font-weight: bold'>Belum ada data</td>";
+                if (count($data['tanggalPengajuan']) == 0 && isset($_GET['search'])) {
+                  $search = $_GET['search'];
+                  $result .= "<tr> <td colspan='3' style='padding-top: 2em;'>Data dengan nama <span style='font-weight: bold'>\"$search\"</span> tidak ditemukan</td> </tr>";
+                } else if (count($data['tanggalPengajuan']) == 0) {
+                  $result .= "<tr> <td colspan='3' style='padding-top: 2em; font-weight: bold'>Belum ada data</td> </tr>";
                 } else {
                   foreach ($data['tanggalPengajuan'] as $tanggal) {
                     $id = $data['namaSuami'][$i]['id'];
@@ -111,7 +130,7 @@
                     $result .= "<td>" . $hanyaTanggal . "</td>";
                     $result .= "<td class='action'>
                                   <a href='print.php?id=$id'> <img src='src/images/icon/print.svg' alt='print-icon'> </a>
-                                  <a href='delete.php?id=$id' onclick='confirmationDelete(event)'> <img src='src/images/icon/delete.svg' alt='delete-icon'> </a>
+                                  <a href='delete.php?id=$id' onclick='confirmationDelete(event)'> <img src='src/images/icon/trash-icon.svg' alt='delete-icon'> </a>
                                 </td>";
                     $result .= "</tr>";
     
@@ -121,6 +140,7 @@
                 echo $result;
   
               ?>
+            </tbody>
             </table>
           </div>
         </div>

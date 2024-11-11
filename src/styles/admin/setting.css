@@ -365,8 +365,12 @@ hr {
     color: black;
   }
 
-  .off-screen-menu ul li a:hover {
+  .off-screen-menu ul li a.active {
     color: #4b8352;
+  } 
+
+  .off-screen-menu ul li a:hover {
+    color: #6c9f6d;
   }
 
   .off-screen-menu ul li a img {
