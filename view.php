@@ -146,7 +146,7 @@
                   <tr>
                     <td>Status Nikah</td>
                     <td>:</td>
-                    <td><?= $dataSuami['status_nikah'] ?></td>
+                    <td><?= $dataSuami['status_kawin'] ?></td>
                   </tr>
                   <tr>
                     <td>Alamat</td>
@@ -190,7 +190,7 @@
                   <tr>
                     <td>Status Nikah</td>
                     <td>:</td>
-                    <td><?= $dataIstri['status_nikah'] ?></td>
+                    <td><?= $dataIstri['status_kawin'] ?></td>
                   </tr>
                   <tr>
                     <td>Alamat</td>

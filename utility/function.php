@@ -1,7 +1,7 @@
 <?php
   $servername = 'localhost';
   $username = 'root';
-  $password = '';
+  $password = 'evan_db123';
   $dbname = 'dispensasi_nikah';
 
   // create connection
@@ -62,7 +62,7 @@
     $tanggalLahirSuami = htmlspecialchars($postVar['hDateOfBirth']);
     $agamaSuami = htmlspecialchars($postVar['hReligion']);
     $pekerjaanSuami = htmlspecialchars($postVar['hJob']);
-    $statusNikahSuami = htmlspecialchars($postVar['hMarriedStatus']);
+    $statusKawinSuami = htmlspecialchars($postVar['hMarriedStatus']);
     $alamatSuami = rtrim(htmlspecialchars($postVar['hAddress']));
 
     $namaIstri = htmlspecialchars($postVar['wName']);
@@ -70,16 +70,16 @@
     $tanggalLahirIstri = htmlspecialchars($postVar['wDateOfBirth']);
     $agamaIstri = htmlspecialchars($postVar['wReligion']);
     $pekerjaanIstri = htmlspecialchars($postVar['wJob']);
-    $statusNikahIstri = htmlspecialchars($postVar['wMarriedStatus']);
+    $statusKawinIstri = htmlspecialchars($postVar['wMarriedStatus']);
     $alamatIstri = rtrim(htmlspecialchars($postVar['wAddress']));
 
-    $hariPernikahan = htmlspecialchars($postVar['dayOfMarriage']);
+    $hariPernikahan = $postVar['dayOfMarriage'];
     $tanggalPernikahan = htmlspecialchars($postVar['dateOfMarriage']);
     $tempatPernikahan = htmlspecialchars($postVar['placeOfMarriage']);
     $jamPernikahan = htmlspecialchars($postVar['timeOfMarriage']);
 
-    $sql = "INSERT INTO data_suami VALUES (default, '$namaSuami', '$tempatLahirSuami', '$tanggalLahirSuami', '$agamaSuami', '$pekerjaanSuami', '$statusNikahSuami', '$alamatSuami')";
-    $sql2 = "INSERT INTO data_istri VALUES (default, '$namaIstri', '$tempatLahirIstri', '$tanggalLahirIstri', '$agamaIstri', '$pekerjaanIstri', '$statusNikahIstri', '$alamatIstri')";
+    $sql = "INSERT INTO data_suami VALUES (default, '$namaSuami', '$tempatLahirSuami', '$tanggalLahirSuami', '$agamaSuami', '$pekerjaanSuami', '$statusKawinSuami', '$alamatSuami')";
+    $sql2 = "INSERT INTO data_istri VALUES (default, '$namaIstri', '$tempatLahirIstri', '$tanggalLahirIstri', '$agamaIstri', '$pekerjaanIstri', '$statusKawinIstri', '$alamatIstri')";
     $sql3 = "INSERT INTO waktu_pernikahan VALUES (default, '$hariPernikahan', '$tanggalPernikahan', '$jamPernikahan', '$tempatPernikahan')";
     
     if (mysqli_query($conn, $sql) && mysqli_query($conn, $sql2) && mysqli_query($conn, $sql3)) {
@@ -154,7 +154,7 @@
     $tanggalLahirSuami = htmlspecialchars($postVar['hDateOfBirth']);
     $agamaSuami = htmlspecialchars($postVar['hReligion']);
     $pekerjaanSuami = htmlspecialchars($postVar['hJob']);
-    $statusNikahSuami = htmlspecialchars($postVar['hMarriedStatus']);
+    $statusKawinSuami = htmlspecialchars($postVar['hMarriedStatus']);
     $alamatSuami = rtrim(htmlspecialchars($postVar['hAddress']));
 
     $sqlGetIdIstri = "SELECT id_istri FROM data_pemohon WHERE id_suami=$idSuami";
@@ -165,19 +165,19 @@
     $tanggalLahirIstri = htmlspecialchars($postVar['wDateOfBirth']);
     $agamaIstri = htmlspecialchars($postVar['wReligion']);
     $pekerjaanIstri = htmlspecialchars($postVar['wJob']);
-    $statusNikahIstri = htmlspecialchars($postVar['wMarriedStatus']);
+    $statusKawinIstri = htmlspecialchars($postVar['wMarriedStatus']);
     $alamatIstri = rtrim(htmlspecialchars($postVar['wAddress']));
 
     $sqlGetIdWaktuPernikahan = "SELECT id_waktu_pernikahan FROM data_pemohon WHERE id_suami=$idSuami";
 
     $idWaktuPernikahan = mysqli_fetch_assoc(mysqli_query($conn, $sqlGetIdWaktuPernikahan))['id_waktu_pernikahan'];
-    $hariPernikahan = htmlspecialchars($postVar['dayOfMarriage']);
+    $hariPernikahan = $postVar['dayOfMarriage'];
     $tanggalPernikahan = htmlspecialchars($postVar['dateOfMarriage']);
     $jamPernikahan = htmlspecialchars($postVar['timeOfMarriage']);
     $tempatPernikahan = htmlspecialchars($postVar['placeOfMarriage']);
 
-    $sql = "UPDATE data_suami SET nama='$namaSuami', tempat_lahir='$tempatLahirSuami', tanggal_lahir='$tanggalLahirSuami', agama='$agamaSuami', pekerjaan='$pekerjaanSuami', status_nikah='$statusNikahSuami', alamat='$alamatSuami' WHERE id=$idSuami";
-    $sql2 = "UPDATE data_istri SET nama='$namaIstri', tempat_lahir='$tempatLahirIstri', tanggal_lahir='$tanggalLahirIstri', agama='$agamaIstri', pekerjaan='$pekerjaanIstri', status_nikah='$statusNikahIstri', alamat='$alamatIstri' WHERE id=$idIstri";
+    $sql = "UPDATE data_suami SET nama='$namaSuami', tempat_lahir='$tempatLahirSuami', tanggal_lahir='$tanggalLahirSuami', agama='$agamaSuami', pekerjaan='$pekerjaanSuami', status_kawin='$statusKawinSuami', alamat='$alamatSuami' WHERE id=$idSuami";
+    $sql2 = "UPDATE data_istri SET nama='$namaIstri', tempat_lahir='$tempatLahirIstri', tanggal_lahir='$tanggalLahirIstri', agama='$agamaIstri', pekerjaan='$pekerjaanIstri', status_kawin='$statusKawinIstri', alamat='$alamatIstri' WHERE id=$idIstri";
     $sql3 = "UPDATE waktu_pernikahan SET hari='$hariPernikahan', tanggal='$tanggalPernikahan', jam='$jamPernikahan', tempat='$tempatPernikahan' WHERE id=$idWaktuPernikahan";
     
     if (mysqli_query($conn, $sql) && mysqli_query($conn, $sql2) && mysqli_query($conn, $sql3)) {

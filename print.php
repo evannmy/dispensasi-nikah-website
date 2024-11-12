@@ -23,7 +23,7 @@
   $tanggalLahirSuami = $data['data_suami']['tanggal_lahir'];
   $agamaSuami = $data['data_suami']['agama'];
   $pekerjaanSuami = $data['data_suami']['pekerjaan'];
-  $statusNikahSuami = $data['data_suami']['status_nikah'];
+  $statusKawinSuami = $data['data_suami']['status_kawin'];
   $alamatSuami = $data['data_suami']['alamat'];
 
   $namaIstri = $data['data_istri']['nama'];
@@ -31,7 +31,7 @@
   $tanggalLahirIstri = $data['data_istri']['tanggal_lahir'];
   $agamaIstri = $data['data_istri']['agama'];
   $pekerjaanIstri = $data['data_istri']['pekerjaan'];
-  $statusNikahIstri = $data['data_istri']['status_nikah'];
+  $statusKawinIstri = $data['data_istri']['status_kawin'];
   $alamatIstri = $data['data_istri']['alamat'];
 
   $hariPernikahan = $data['data_waktu_pernikahan']['hari'];
@@ -50,7 +50,7 @@
     "tanggalLahirSuami" => indonesianDate($tanggalLahirSuami),
     "agamaSuami" => $agamaSuami,
     "pekerjaanSuami" => $pekerjaanSuami,
-    "statusNikahSuami" => $statusNikahSuami,
+    "statusKawinSuami" => $statusKawinSuami,
     "alamatSuami" => $alamatSuami,
 
     "namaIstri" => $namaIstri,
@@ -58,7 +58,7 @@
     "tanggalLahirIstri" => indonesianDate($tanggalLahirIstri),
     "agamaIstri" => $agamaIstri,
     "pekerjaanIstri" => $pekerjaanIstri,
-    "statusNikahIstri" => $statusNikahIstri,
+    "statusKawinIstri" => $statusKawinIstri,
     "alamatIstri" => $alamatIstri,
 
     "hariPernikahan" => $hariPernikahan,

@@ -121,15 +121,20 @@
                   <option value="hindu" <?= $dataSuami['agama'] == 'hindu' ? 'selected' : '' ?> >Hindu</option>
                   <option value="buddha" <?= $dataSuami['agama'] == 'buddha' ? 'selected' : '' ?> >Buddha</option>
                   <option value="konghucu" <?= $dataSuami['agama'] == 'konghucu' ? 'selected' : '' ?> >Konghucu</option>
+                  <option value="Kepercayaan Terhadap Tuhan YME" <?= $dataSuami['agama'] == 'Kepercayaan Terhadap Tuhan YME' ? 'selected' : '' ?>>Kepercayaan Terhadap Tuhan YME</option>
                 </select>
         
                 <!-- input job -->
                 <label for="hJob">Pekerjaan: </label>
                 <input type="text" name="hJob" id="hJob" placeholder="Masukkan pekerjaan calon suami" maxlength="50" value="<?= $dataSuami['pekerjaan'] ?>" required>
-        
-                <!-- married status -->
-                <label for="hMarriedStatus">Status Nikah: </label>
-                <input type="text" name="hMarriedStatus" id="hMarriedStatus" placeholder="Masukkan status nikah saat ini" maxlength="50" value="<?= $dataSuami['status_nikah'] ?>" required>
+
+                <label for="hMarriedStatus">Status Kawin: </label>
+                <select name="hMarriedStatus" id="hMarriedStatus">
+                  <option value="Belum Kawin" <?= $dataSuami['status_kawin'] == 'Belum Kawin' ? 'selected' : '' ?> >Belum Kawin</option>
+                  <option value="Kawin" <?= $dataSuami['status_kawin'] == 'Kawin' ? 'selected' : '' ?>>Kawin</option>
+                  <option value="Cerai Hidup" <?= $dataSuami['status_kawin'] == 'Cerai Hidup' ? 'selected' : '' ?> >Cerai Hidup</option>
+                  <option value="Cerai Mati" <?= $dataSuami['status_kawin'] == 'Cerai Mati' ? 'selected' : '' ?> >Cerai Mati</option>
+                </select>
         
                 <!-- input address -->
                 <label for="hAddress">Alamat: </label>
@@ -160,15 +165,20 @@
                   <option value="hindu" <?= $dataIstri['agama'] == 'hindu' ? 'selected' : '' ?> >Hindu</option>
                   <option value="buddha" <?= $dataIstri['agama'] == 'buddha' ? 'selected' : '' ?> >Buddha</option>
                   <option value="konghucu" <?= $dataIstri['agama'] == 'konghucu' ? 'selected' : '' ?> >Konghucu</option>
+                  <option value="kepercayaan Terhadap Tuhan YME" <?= $dataIstri['agama'] == 'kepercayaan Terhadap Tuhan YME' ? 'selected' : '' ?>>Kepercayaan Terhadap Tuhan YME</option>
                 </select>
         
                 <!-- input job -->
                 <label for="wJob">Pekerjaan: </label>
                 <input type="text" name="wJob" id="wJob" placeholder="Masukkan pekerjaan calon istri" maxlength="50" value="<?= $dataIstri['pekerjaan'] ?>" required>
-        
-                <!-- married status -->
-                <label for="wMarriedStatus">Status Nikah: </label>
-                <input type="text" name="wMarriedStatus" id="wMarriedStatus" placeholder="Masukkan status nikah saat ini" maxlength="50" value="<?= $dataIstri['status_nikah'] ?>" required>
+
+                <label for="wMarriedStatus">Status Kawin: </label>
+                <select name="wMarriedStatus" id="wMarriedStatus">
+                  <option value="Belum Kawin" <?= $dataIstri['status_kawin'] == 'Belum Kawin' ? 'selected' : '' ?> >Belum Kawin</option>
+                  <option value="Kawin" <?= $dataIstri['status_kawin'] == 'Kawin' ? 'selected' : '' ?>>Kawin</option>
+                  <option value="Cerai Hidup" <?= $dataIstri['status_kawin'] == 'Cerai Hidup' ? 'selected' : '' ?> >Cerai Hidup</option>
+                  <option value="Cerai Mati" <?= $dataIstri['status_kawin'] == 'Cerai Mati' ? 'selected' : '' ?> >Cerai Mati</option>
+                </select>
         
                 <!-- input address -->
                 <label for="wAddress">Alamat: </label>
@@ -179,9 +189,18 @@
 
               <div class="input-3">
                 <p>Waktu <span style="color: #e7c27d">Pernikahan</span></p>
+
                 <!-- input day of marriage -->
                 <label for="dayOfMarriage">Hari: </label>
-                <input type="text" name="dayOfMarriage" id="dayOfMarriage" placeholder="Masukkan hari" maxlength="50" value="<?= $dataWaktuPernikahan['hari'] ?>" required>
+                <select name="dayOfMarriage" id="dayOfMarriage">
+                  <option value="Senin" <?= $dataWaktuPernikahan['hari'] == 'Senin' ? 'selected' : '' ?> >Senin</option>
+                  <option value="Selasa" <?= $dataWaktuPernikahan['hari'] == 'Selasa' ? 'selected' : '' ?> >Selasa</option>
+                  <option value="Rabu" <?= $dataWaktuPernikahan['hari'] == 'Rabu' ? 'selected' : '' ?> >Rabu</option>
+                  <option value="Kamis" <?= $dataWaktuPernikahan['hari'] == 'Kamis' ? 'selected' : '' ?> >Kamis</option>
+                  <option value="Jum''at" <?= $dataWaktuPernikahan['hari'] == "Jum'at" ? 'selected' : '' ?> >Jum'at</option>
+                  <option value="Sabtu" <?= $dataWaktuPernikahan['hari'] == 'Sabtu' ? 'selected' : '' ?> >Sabtu</option>
+                  <option value="Minggu" <?= $dataWaktuPernikahan['hari'] == 'Minggu' ? 'selected' : '' ?> >Minggu</option>
+                </select>
         
                 <!-- input date of marriage-->
                 <label for="dateOfMarriage">Tanggal: </label>

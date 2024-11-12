@@ -112,15 +112,20 @@
                   <option value="Hindu">Hindu</option>
                   <option value="Buddha">Buddha</option>
                   <option value="Konghucu">Konghucu</option>
+                  <option value="Kepercayaan Terhadap Tuhan YME">Kepercayaan Terhadap Tuhan YME</option>
                 </select>
         
                 <!-- input job -->
                 <label for="hJob">Pekerjaan: </label>
                 <input type="text" name="hJob" id="hJob" placeholder="Masukkan pekerjaan calon suami" maxlength="50" required>
-        
-                <!-- married status -->
-                <label for="hMarriedStatus">Status Nikah: </label>
-                <input type="text" name="hMarriedStatus" id="hMarriedStatus" placeholder="Masukkan status nikah saat ini" maxlength="50" required>
+
+                <label for="hMarriedStatus">Status Kawin: </label>
+                <select name="hMarriedStatus" id="hMarriedStatus">
+                  <option value="Belum Kawin">Belum Kawin</option>
+                  <option value="Kawin">Kawin</option>
+                  <option value="Cerai Hidup">Cerai Hidup</option>
+                  <option value="Cerai Mati">Cerai Mati</option>
+                </select>
         
                 <!-- input address -->
                 <label for="hAddress">Alamat: </label>
@@ -151,15 +156,20 @@
                   <option value="Hindu">Hindu</option>
                   <option value="Buddha">Buddha</option>
                   <option value="Konghucu">Konghucu</option>
+                  <option value="Kepercayaan Terhadap Tuhan YME">Kepercayaan Terhadap Tuhan YME</option>
                 </select>
         
                 <!-- input job -->
                 <label for="wJob">Pekerjaan: </label>
                 <input type="text" name="wJob" id="wJob" placeholder="Masukkan pekerjaan calon istri" maxlength="50" required>
-        
-                <!-- married status -->
-                <label for="wMarriedStatus">Status Nikah: </label>
-                <input type="text" name="wMarriedStatus" id="wMarriedStatus" placeholder="Masukkan status nikah saat ini" maxlength="50" required>
+
+                <label for="wMarriedStatus">Status Kawin: </label>
+                <select name="wMarriedStatus" id="wMarriedStatus">
+                  <option value="Belum Kawin">Belum Kawin</option>
+                  <option value="Kawin">Kawin</option>
+                  <option value="Cerai Hidup">Cerai Hidup</option>
+                  <option value="Cerai Mati">Cerai Mati</option>
+                </select>
         
                 <!-- input address -->
                 <label for="wAddress">Alamat: </label>
@@ -170,9 +180,18 @@
   
               <div class="input-3">
                 <p>Waktu <span style="color: #e7c27d">Pernikahan</span></p>
+
                 <!-- input day of marriage -->
                 <label for="dayOfMarriage">Hari: </label>
-                <input type="text" name="dayOfMarriage" id="dayOfMarriage" placeholder="Masukkan hari" maxlength="50" required>
+                <select name="dayOfMarriage" id="dayOfMarriage">
+                  <option value="Senin">Senin</option>
+                  <option value="Selasa">Selasa</option>
+                  <option value="Rabu">Rabu</option>
+                  <option value="Kamis">Kamis</option>
+                  <option value="Jum''at">Jum'at</option>
+                  <option value="Sabtu">Sabtu</option>
+                  <option value="Minggu">Minggu</option>
+                </select>
         
                 <!-- input date of marriage-->
                 <label for="dateOfMarriage">Tanggal: </label>
