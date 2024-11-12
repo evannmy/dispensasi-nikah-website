@@ -182,16 +182,14 @@ main h1 {
   padding: 10px;
 }
 
+.content p {
+  font-weight: bold;
+  margin-bottom: .8em;
+}
+
 .content form label {
   display: block;
-}
-
-.content form label:nth-child(1) {
-  font-family: work-sans-bold, sans-serif;
-}
-
-.content form:nth-of-type(2) label:nth-child(1) {
-  margin-bottom: 1em;
+  margin-top: 10px;
 }
 
 .content form input {
@@ -199,7 +197,11 @@ main h1 {
   border-radius: 5px;
   border: 1px solid #999;
   padding: 3px;
-  margin-top: 10px;
+  margin-top: 5px;
+}
+
+.content form:nth-child(1) label {
+  margin: 0;
 }
 
 .content form input[name="mailNumber"] {
@@ -214,25 +216,7 @@ main h1 {
   border: none;
   padding: 5px 10px;
   cursor: pointer;
-}
-
-.content form .input-password-container {
-  width: 250px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  margin: 10px 0;
-}
-
-.content form .input-password-container input {
-  margin-top: 0;
-}
-
-.content form .input-password-container img {
-  position: absolute;
-  right: 0;
-  width: 1.3em;
-  margin-right: 5px;
+  margin-top: 10px;
 }
 
 .desktop-heading {
@@ -269,16 +253,6 @@ hr {
   margin: 1.5em 0;
   width: 100%;
   color: #4b8352;
-}
-
-.warning {
-  font-size: .9em;
-  color: darkred;
-  display: none;
-}
-
-.warning.active {
-  display: block;
 }
 
 @media print, screen and (min-width: 768px) {

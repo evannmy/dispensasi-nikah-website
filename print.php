@@ -44,6 +44,13 @@
   date_default_timezone_set('Asia/Jakarta');
   $tanggalSaatIni = indonesianDate(date("Y-m-d"));
 
+  $dataTTD = getTTD();
+
+  $namaTTD = $dataTTD[0]['nama'];
+  $jabatanTTD = $dataTTD[0]['jabatan'];
+  $pangkatTTD = $dataTTD[0]['pangkat'];
+  $NIPTTD = $dataTTD[0]['NIP'];
+
   $templateProcessor->setValues([
     "namaSuami" => $namaSuami,
     "tempatLahirSuami" => $tempatLahirSuami,
@@ -67,6 +74,11 @@
     "tempatPernikahan" => $tempatPernikahan,
 
     "nomorSurat" => $nomorSurat,
+
+    "namaTTD" => $namaTTD,
+    "jabatanTTD" => $jabatanTTD,
+    "pangkatTTD" => $pangkatTTD,
+    "NIPTTD" => $NIPTTD,
 
     "tanggalSaatIni" => $tanggalSaatIni
   ]);

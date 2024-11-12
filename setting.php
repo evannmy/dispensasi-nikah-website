@@ -13,6 +13,7 @@
   // }
 
   $nomorSurat = getMailNumber();
+  $dataTTD = getTTD();
 
   $identifier = "setting";
 ?>
@@ -34,6 +35,10 @@
         setMailNumber($_POST);
       }
 
+      if (isset($_POST["ttdSettingSubmit"])) {
+        setTTD($_POST);
+      }
+
       if (isset($_SESSION['mailNumberAlert']) && $_SESSION['mailNumberAlert'] == 'success') {
         echo "<script>
                 Swal.fire({
@@ -46,6 +51,18 @@
                   window.location.href='utility/unset-alert.php';
                 });
               </script>";
+      } else if (isset($_SESSION['ttdAlert']) && $_SESSION['ttdAlert'] == 'success') {
+        echo "<script>
+                Swal.fire({
+                  icon: 'success',
+                  title: 'Berhasil menyimpan data TTD',
+                  showConfirmButton: false,
+                  timer: 1500
+                }).then(() => {
+                  // After the alert closes, call a PHP script to unset the session variable
+                  window.location.href='utility/unset-alert.php';
+                });
+      </script>";
       }
     ?>
     <div class="desktop-heading">
@@ -109,39 +126,28 @@
         <div class="content">
           <form action="" method="post">
             <label for="mailNumber">Nomor Surat:</label>
-            <input type="text" name="mailNumber" id="mailNumber" maxlength="50" value="<?= $nomorSurat ?>">
+            <input type="text" name="mailNumber" id="mailNumber" maxlength="50" value="<?= $nomorSurat ?>" required>
             <input type="submit" name="mailNumberSubmit" value="Simpan">
           </form>
 
-          <!-- <hr>
+          <hr>
 
+          <p>Pengaturan TTD</p>
           <form action="" method="post">
-            <label for="changePassword">Ubah password:</label>
+            <label for="ttdPersonName">Nama:</label>
+            <input type="text" name="ttdPersonName" id="ttdPersonName" maxlength="50" value="<?= $dataTTD[0]['nama'] ?>" required>
 
-            <label for="oldPassword">Masukkan password lama:</label>
-            <div class="input-password-container">
-              <input type="password" id="oldPassword" name="oldPassword">
-              <img src="src/images/icon/eye-close.svg" alt="eye icon">
-            </div>
+            <label for="ttdPersonJabatan">Jabatan:</label>
+            <input type="text" name="ttdPersonJabatan" id="ttdPersonJabatan" maxlength="50" value="<?= $dataTTD[0]['jabatan'] ?>" required>
 
-            <label for="newPassword">Masukkan password baru:</label>
-            <div class="input-password-container">
-              <input type="password" id="newPassword" name="newPassword">
-              <img src="src/images/icon/eye-close.svg" alt="eye icon">
-            </div>
+            <label for="ttdPersonPangkat">Pangkat:</label>
+            <input type="text" name="ttdPersonPangkat" id="ttdPersonPangkat" maxlength="50" value="<?= $dataTTD[0]['pangkat'] ?>" required>
 
-            <label for="retypePassword">Masukkan ulang password baru:</label>
-            <div class="input-password-container">
-              <input type="password" id="retypePassword" name="retypePassword">
-              <img src="src/images/icon/eye-close.svg" alt="eye icon">
-            </div>
+            <label for="ttdPersonNIP">NIP:</label>
+            <input type="text" name="ttdPersonNIP" id="ttdPersonNIP" maxlength="50" value="<?= $dataTTD[0]['NIP'] ?>" required>
 
-            <div class="warning">
-              <p></p>
-            </div>
-
-            <input type="submit" name="changePasswordSubmit" value="Simpan">
-          </form> -->
+            <input type="submit" name="ttdSettingSubmit" value="Simpan">
+          </form>
         </div>
       </main>
     </div>

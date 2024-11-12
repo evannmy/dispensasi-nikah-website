@@ -1,7 +1,7 @@
 <?php
   $servername = 'localhost';
   $username = 'root';
-  $password = 'evan_db123';
+  $password = '';
   $dbname = 'dispensasi_nikah';
 
   // create connection
@@ -277,6 +277,61 @@
       $nomorSurat = mysqli_fetch_assoc($result)['nomor'];
       
       return $nomorSurat;
+    }
+
+    return;
+  }
+
+  function setTTD($postVar) {
+    global $conn;
+
+    $nama = $postVar["ttdPersonName"];
+    $jabatan = $postVar["ttdPersonJabatan"];
+    $pangkat = $postVar["ttdPersonPangkat"];
+    $NIP = $postVar["ttdPersonNIP"];
+    
+    $checkSql = "SELECT * FROM ttd";
+    $resultCheckSql = mysqli_query($conn, $checkSql);
+    $numRows = mysqli_num_rows($resultCheckSql);
+
+    if ($numRows > 0) {
+      $sql = "UPDATE ttd SET nama='$nama', jabatan='$jabatan', pangkat='$pangkat', NIP='$NIP'";
+    } else {
+      $sql = "INSERT INTO ttd VALUES ('$nama', '$jabatan', '$pangkat', '$NIP')";
+    }
+    
+    if(mysqli_query($conn, $sql)) {
+      $_SESSION['ttdAlert'] = 'success';
+      echo "<script>
+        window.location.href='setting.php';
+      </script>";
+    } else {
+      echo "<script>
+        Swal.fire({
+          icon: 'error',
+          title: 'Gagal menyimpan nomor surat',
+          showConfirmButton: false,
+          timer: 1500
+        });
+      </script>";
+    }
+  }
+
+  function getTTD() {
+    global $conn;
+
+    $sql = "SELECT * FROM ttd";
+    $result = mysqli_query($conn, $sql);
+    $numRows = mysqli_num_rows($result);
+
+    $dataTTD = [];
+
+    if ($numRows > 0) {
+      while($row = mysqli_fetch_assoc($result)) {
+        $dataTTD[] = $row;
+      }
+      
+      return $dataTTD;
     }
 
     return;
