@@ -1,57 +1,39 @@
-# 📌 Dispensasi Nikah Website
-"Website ini digunakan untuk mengelola data pengajuan dispensasi nikah yang bertujuan untuk meningkatkan efisiensi dan fleksibilitas."
+# 📌 Marriage Dispensation Website
+"This website is used to manage marriage dispensation application data, with the goal of increasing efficiency and flexibility."
 
-## 🚀 Fitur Utama
-Berikut adalah beberapa fitur utama dari website ini:
-- 📝 **Form Input**: Pengguna dapat membuat, mengedit, dan menghapus pengajuan dispensasi nikah.
-- 🔍 **Pencarian**: Fitur pencarian untuk menemukan riwayat pengajuan dispensasi nikah.
-- 🖨️ **Cetak Dokumen**: Fitur cetak dokumen atau unduh sebagai pdf.
-- 📱 **Responsif**: Tampilan yang mendukung berbagai ukuran layar.
+## 🚀 Key Features
+Here are some of the main features of this website:
+- 📝 **Input Form**: Users can create, edit, and delete marriage dispensation applications.
+- 🔍 **Search**: A search feature to find a history of marriage dispensation applications.
+- 🖨️ **Print Documents**: A feature to print documents or download them as a PDF.
+- 📱 **Responsive**: A display that supports various screen sizes.
 
-## 🖼️ Tampilan Website
-Berikut adalah beberapa tampilan dari website ini:
+## 🖼️ Website Screenshots
+Here are some screenshots of the website:
 
-### 📌 Halaman Login
-![Tampilan Login](https://github.com/evannmy/dispensasi-nikah-website/blob/main/website-displays/login-page.png)
+### 📌 Login Page
+![Login View](https://github.com/evannmy/dispensasi-nikah-website/blob/main/website-displays/login-page.png)
 
-### 📌 Halaman Dashboard
-![Tampilan Dashboard](https://github.com/evannmy/dispensasi-nikah-website/blob/main/website-displays/dashboard-page.png)
+### 📌 Dashboard Page
+![Dashboard View](https://github.com/evannmy/dispensasi-nikah-website/blob/main/website-displays/dashboard-page.png)
 
-### 📌 Halaman Input
-![Tampilan Form Input](https://github.com/evannmy/dispensasi-nikah-website/blob/main/website-displays/input-page.png)
+### 📌 Input Page
+![Input Form View](https://github.com/evannmy/dispensasi-nikah-website/blob/main/website-displays/input-page.png)
 
-### 📌 Halaman Pengaturan
-![Tampilan Pengaturan](https://github.com/evannmy/dispensasi-nikah-website/blob/main/website-displays/setting-page.png)
+### 📌 Settings Page
+![Settings View](https://github.com/evannmy/dispensasi-nikah-website/blob/main/website-displays/setting-page.png)
 
-## 📥 Instalasi dan Menjalankan Proyek
+## 📥 Installation and Running the Project
 
-### 📦 Dependency
-Pastikan Anda memiliki dependensi berikut sebelum menjalankan proyek:
-- **Libre Office** (digunakan untuk fitur print)
+### 📦 Dependencies
+Ensure you have the following dependencies before running the project:
+- **Libre Office** (used for the print feature)
 
-Ikuti langkah-langkah berikut untuk menjalankan proyek ini secara lokal:
+Follow these steps to run this project locally:
 
 ```bash
-# 1. Clone repository
-# 2. Aktifkan service apache dan mysql
-# 3. Import database
-# 4. Pindahkan repository ke direktori server lokal
-# 5. Jalankan server lokal
-```
-
-## 💻 Teknologi yang Digunakan
-Proyek ini dibuat menggunakan teknologi berikut:
-- **Frontend**: HTML, CSS, JavaScript
-- **Backend**: PHP
-- **Database**: MySQL
-
-## 📄 Lisensi
-Proyek ini dilisensikan di bawah lisensi MIT.
-
-## 👨‍💻 Kontribusi
-Jika ingin berkontribusi, silakan buat pull request atau laporkan masalah di [issues](https://github.com/evannmy/dispensasi-nikah-website/issues).
-
----
-
-⭐ Jangan lupa untuk memberikan star jika proyek ini bermanfaat! 🚀
-
+# 1. Clone the repository
+# 2. Activate the apache and mysql services
+# 3. Import the database
+# 4. Move the repository to your local server directory
+# 5. Run the local server
